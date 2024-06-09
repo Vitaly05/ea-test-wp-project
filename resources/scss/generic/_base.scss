@@ -537,7 +537,9 @@ svg.logo {
     font-size: 22px;
     line-height: 120%;
 
-    transition: font-size $transition-default;
+    transition:
+      font-size $transition-default,
+      background-size $transition-default;
 
     @include breakpoint-down(desktop) {
       font-size: 18px;
@@ -549,8 +551,8 @@ svg.logo {
       background-color: $color-primary-hover;
     }
 
-    .button-icon__text {
-      text-decoration: underline;
+    .button-icon__text.underline-hover {
+      background-size: 100% 2px;
     }
   }
 }
@@ -576,5 +578,22 @@ svg.logo {
       background-color: $color-primary-hover;
       box-shadow: inset 0px 0px 0px 3px $color-primary-hover;
     }
+  }
+}
+
+.underline-hover {
+  width: fit-content;
+
+  text-decoration: none;
+  color: currentColor;
+  background-image: linear-gradient(to bottom, transparent 20%, currentColor 21%);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+
+  transition: background-size $transition-default;
+
+  &:hover {
+    background-size: 100% 2px;
   }
 }

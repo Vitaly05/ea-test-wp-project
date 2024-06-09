@@ -24,12 +24,12 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
         <div class="top-footer__navigation">
           <div class="top-footer__title">Navigation</div>
           <div class="top-footer__links">
-            <a class="top-footer__link" href="javascript:void(0)">Main</a>
-            <a class="top-footer__link" href="javascript:void(0)">About Us</a>
-            <a class="top-footer__link" href="javascript:void(0)">Contact Us</a>
-            <a class="top-footer__link" href="javascript:void(0)">Before & After</a>
-            <a class="top-footer__link" href="javascript:void(0)">Resources</a>
-            <a class="top-footer__link" href="javascript:void(0)">Payment</a>
+            <a class="top-footer__link underline-hover" href="javascript:void(0)">Main</a>
+            <a class="top-footer__link underline-hover" href="javascript:void(0)">About Us</a>
+            <a class="top-footer__link underline-hover" href="javascript:void(0)">Contact Us</a>
+            <a class="top-footer__link underline-hover" href="javascript:void(0)">Before & After</a>
+            <a class="top-footer__link underline-hover" href="javascript:void(0)">Resources</a>
+            <a class="top-footer__link underline-hover" href="javascript:void(0)">Payment</a>
           </div>
         </div>
         <div class="top-footer__contacts">
@@ -45,9 +45,11 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                   fill="#FF368A" />
               </svg>
             </div>
-            <a class="contact__text" href="javascript:void(0)">
-              4535 Forsyth Rd Suite 2<br /> Macon, GA 31210
-            </a>
+            <div class="contact__text">
+              <a class="underline-hover" href="javascript:void(0)">
+                4535 Forsyth Rd Suite 2<br> Macon, GA 31210
+              </a>
+            </div>
           </div>
           <div class="top-footer__contact">
             <div class="contact__icon">
@@ -64,7 +66,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                 </defs>
               </svg>
             </div>
-            <a class="contact__text" href="tel:4782543220">
+            <a class="contact__text underline-hover" href="tel:4782543220">
               (478) 254-3220
             </a>
           </div>

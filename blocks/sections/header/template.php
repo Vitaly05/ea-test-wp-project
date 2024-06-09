@@ -46,7 +46,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
               </defs>
             </svg>
           </div>
-          <div class="button-icon__text">
+          <div class="button-icon__text underline-hover">
             Menu
           </div>
         </button>
@@ -65,7 +65,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
               </defs>
             </svg>
           </div>
-          <div class="button-icon__text">
+          <div class="button-icon__text underline-hover">
             (478) 254-3220
           </div>
         </a>
@@ -153,9 +153,11 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                 fill="#FF368A" />
             </svg>
           </div>
-          <a class="contact__text" href="javascript:void(0)">
-            4535 Forsyth Rd Suite 2<br /> Macon, GA 31210
-          </a>
+          <div class="contact__text">
+            <a class="underline-hover" href="javascript:void(0)">
+              4535 Forsyth Rd Suite 2<br /> Macon, GA 31210
+            </a>
+          </div>
         </div>
         <div class="header-menu__contact">
           <div class="contact__icon">
@@ -172,7 +174,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
               </defs>
             </svg>
           </div>
-          <a class="contact__text" href="tel:4782543220">
+          <a class="contact__text underline-hover" href="tel:4782543220">
             (478) 254-3220
           </a>
         </div>

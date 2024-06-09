@@ -23,6 +23,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
 ?>
 
 <section class="section">
+  <div class="hero__header-collapse js-collapse-header"></div>
   <div class="background-img">
     <img src="/wp-content/themes/testproject/resources/images/backgrounds/Hero.jpg" alt="background">
     <div class="background-filter section-hero__bg-filter"></div>
