@@ -20,14 +20,15 @@
 }
 
 .section-hero {
-  display: flex;
-  justify-content: space-between;
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .hero-menu {
   margin-top: 320px;
   margin-bottom: 320px;
-  margin-left: 120px;
 
   display: flex;
   flex-direction: column;
@@ -86,7 +87,6 @@
 .hero-intro {
   margin-top: 380px;
   margin-bottom: 200px;
-  margin-right: 120px;
 
   display: flex;
   flex-direction: column;
@@ -131,7 +131,6 @@
     margin: 0;
     margin-top: 462px;
     margin-bottom: 200px;
-    margin-left: 40px;
 
     .hero-intro__title {
       font-size: 50px;
@@ -152,7 +151,6 @@
     margin: 0;
     margin-top: 202px;
     margin-bottom: 130px;
-    margin-left: 20px;
 
     .hero-intro__title {
       font-size: 40px;
