@@ -2,15 +2,215 @@
 	Generic
 \* ------------------------------------------------------------ */
 
-@import "../../../../resources/scss/generic/variables";
-@import "../../../../resources/scss/generic/functions";
-@import "../../../../resources/scss/generic/mixins";
+@import '../../../../resources/scss/generic/variables';
+@import '../../../../resources/scss/generic/functions';
+@import '../../../../resources/scss/generic/mixins';
 
 /* ------------------------------------------------------------ *\
 	Blocks: Section Footer
 \* ------------------------------------------------------------ */
 
 .footer {
-	position: relative;
-	overflow: hidden;
+  position: relative;
+  overflow: hidden;
+
+  background-color: $white;
+}
+
+.top-footer {
+  margin-top: 70px;
+  margin-bottom: 50px;
+  margin-left: 40px;
+  margin-right: 40px;
+
+  @include breakpoint-up(mobile) {
+    margin: 0;
+    margin-top: 100px;
+    margin-bottom: 70px;
+  }
+
+  @include breakpoint-up(small-desktop) {
+    margin: 0;
+    margin-top: 136px;
+    margin-bottom: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@include breakpoint-up(mobile) {
+  .top-footer__top-container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.top-footer__navigation {
+  @include breakpoint-up(mobile) {
+    margin-left: 80px;
+  }
+
+  @include breakpoint-up(small-desktop) {
+    margin: 0;
+  }
+}
+
+.top-footer__title {
+  color: $text-secondary;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 120%;
+}
+
+.top-footer__links {
+  margin-top: 30px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.top-footer__link {
+  color: $text-secondary;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 140%;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.top-footer__contacts {
+  margin-top: 50px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  @include breakpoint-up(mobile) {
+    margin-top: 0;
+    margin-right: 64px;
+  }
+
+  @include breakpoint-up(small-desktop) {
+    margin: 0;
+    margin-left: 255px;
+    margin-right: 128px;
+  }
+}
+
+.top-footer__contact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  .contact__icon {
+    $size: 24px;
+
+    width: $size;
+    height: $size;
+
+    svg {
+      width: $size;
+      height: $size;
+    }
+
+    path {
+      fill: $color-primary;
+    }
+  }
+
+  .contact__text {
+    color: $text-secondary;
+
+    font-family: 'BankGothic';
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: -0.05em;
+  }
+}
+
+.top-footer__social {
+  margin-top: 50px;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.top-footer__icon-link {
+  $size: 34px;
+
+  display: block;
+  width: $size;
+  height: $size;
+
+  svg {
+    width: $size;
+    height: $size;
+
+    path {
+      color: $color-primary;
+
+      transition: color $transition-default;
+    }
+  }
+
+  &:hover {
+    path {
+      color: $color-primary-hover;
+    }
+  }
+}
+
+.top-footer__images-grid {
+  --cols-count: 2;
+  --cell-size: 137px;
+  --rows-count: 2;
+
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: grid;
+  grid-template-columns: repeat(var(--cols-count), var(--cell-size));
+  grid-template-rows: repeat(var(--rows-count), var(--cell-size));
+  gap: 6px;
+  width: max-content;
+
+  .top-footer__image {
+    width: var(--cell-size);
+    height: var(--cell-size);
+
+    border-radius: 2px;
+  }
+
+  @include breakpoint-up(mobile) {
+    --cell-size: 147px;
+    --cols-count: 4;
+    --rows-count: 1;
+
+    margin-top: 70px;
+  }
+
+  @include breakpoint-up(small-desktop) {
+    --cell-size: 152px;
+    --cols-count: 2;
+    --rows-count: 2;
+
+    margin: 0;
+  }
 }

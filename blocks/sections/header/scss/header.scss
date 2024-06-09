@@ -2,14 +2,116 @@
 	Generic
 \* ------------------------------------------------------------ */
 
-@import "../../../../resources/scss/generic/variables";
-@import "../../../../resources/scss/generic/functions";
-@import "../../../../resources/scss/generic/mixins";
+@import '../../../../resources/scss/generic/variables';
+@import '../../../../resources/scss/generic/functions';
+@import '../../../../resources/scss/generic/mixins';
 
 /* ------------------------------------------------------------ *\
 	Blocks: Section Header
 \* ------------------------------------------------------------ */
 
 .header {
-	background-color: #ddd;
+  display: flex;
+  justify-content: center;
+}
+
+.header__sticky {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  width: 100%;
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: auto;
+  }
+
+  .header__sticky__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: $color-secondary;
+  }
+
+  * {
+    z-index: inherit;
+  }
+}
+
+.header__left-buttons {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+
+  @include breakpoint-down(desktop) {
+    gap: 10px;
+  }
+}
+
+@include breakpoint-down(desktop) {
+  .menu-button .button-icon__text {
+    display: none;
+  }
+}
+
+@include breakpoint-down(tablet) {
+  .phone-button .button-icon__text,
+  .header__right-buttons .button {
+    display: none;
+  }
+}
+
+.header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+
+  .logo {
+    width: 148px;
+    height: 106px;
+
+    transition:
+      width $transition-default,
+      height $transition-default;
+  }
+
+  &:hover {
+    .logo__paint-item {
+      fill: $color-primary-hover;
+    }
+  }
+
+  @include breakpoint-down(desktop) {
+    margin-top: 0;
+
+    align-items: center;
+
+    .logo {
+      width: 65px;
+      height: 44px;
+    }
+  }
+}
+
+.header__right-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 10px;
+}
+
+.header__sticky--large {
+  .header__left-buttons,
+  .header__right-buttons {
+    align-items: start;
+  }
 }

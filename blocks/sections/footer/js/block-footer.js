@@ -8,4 +8,4 @@ const init = function() {
 }
 
 
-initScript( '.header', 'header', init )
+initScript( '.footer', 'footer', init )

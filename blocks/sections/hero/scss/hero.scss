@@ -2,15 +2,160 @@
 	Generic
 \* ------------------------------------------------------------ */
 
-@import "../../../../resources/scss/generic/variables";
-@import "../../../../resources/scss/generic/functions";
-@import "../../../../resources/scss/generic/mixins";
+@import '../../../../resources/scss/generic/variables';
+@import '../../../../resources/scss/generic/functions';
+@import '../../../../resources/scss/generic/mixins';
 
 /* ------------------------------------------------------------ *\
 	Blocks: Section Hero
 \* ------------------------------------------------------------ */
 
-.section-hero,
-.acf-block-preview .section-hero {
+.section {
+  position: relative;
+}
 
+.section-hero__bg-filter {
+  background-color: $color-secondary;
+  opacity: 0.5;
+}
+
+.section-hero {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero-menu {
+  margin-top: 320px;
+  margin-bottom: 320px;
+  margin-left: 120px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 26px;
+
+  &:has(.hero-menu__link:hover) {
+    .hero-menu__link--active:not(:hover) {
+      opacity: 0.5;
+    }
+  }
+
+  .hero-menu__link {
+    position: relative;
+
+    padding-left: 15px;
+    color: $text-primary;
+    opacity: 0.5;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 22px;
+    line-height: 120%;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      height: 100%;
+      width: 3px;
+    }
+  }
+
+  .hero-menu__link--active {
+    opacity: 1;
+
+    &::before {
+      background-color: $color-primary;
+    }
+  }
+
+  @include breakpoint-down(desktop) {
+    display: none;
+  }
+}
+
+.hero-intro {
+  margin-top: 380px;
+  margin-bottom: 200px;
+  margin-right: 120px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  .hero-intro__title {
+    color: $text-primary;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 100px;
+    line-height: 100%;
+
+    @include breakpoint-down(desktop) {
+      .hero-title-br {
+        display: none;
+      }
+    }
+  }
+
+  .hero-intro__text {
+    margin-top: 20px;
+
+    color: $text-primary;
+
+    font-family: 'BankGothic';
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: -0.05em;
+  }
+
+  .hero-intro__actions {
+    margin-top: 50px;
+
+    display: flex;
+    gap: 10px;
+  }
+
+  @include breakpoint-down(desktop) {
+    margin: 0;
+    margin-top: 462px;
+    margin-bottom: 200px;
+    margin-left: 40px;
+
+    .hero-intro__title {
+      font-size: 50px;
+    }
+
+    .hero-intro__text {
+      font-size: 20px;
+    }
+
+    .hero-intro__actions {
+      margin-top: 30px;
+
+      flex-direction: column;
+    }
+  }
+
+  @include breakpoint-down(mobile-small) {
+    margin: 0;
+    margin-top: 202px;
+    margin-bottom: 130px;
+    margin-left: 20px;
+
+    .hero-intro__title {
+      font-size: 40px;
+    }
+  }
 }

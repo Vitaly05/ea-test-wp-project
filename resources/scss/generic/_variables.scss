@@ -1,12 +1,21 @@
-@import "../generic/functions";
-@import "../generic/mixins";
+@import '../generic/functions';
+@import '../generic/mixins';
 
 $white: #ffffff;
 $black: #000000;
 
+$text-primary: #ffffff;
+$text-secondary: #135978;
+
+$color-primary: #ff368a;
+$color-primary-hover: #fab7d8;
+$color-secondary: #135978;
+
+$header-height: 80px;
+
 $responsive-ios: 812px;
 
-$font-main: 'Open Sans';
+$font-main: 'Montserrat';
 
 // Transitions
 $transition-duration-default: 0.3s;
@@ -14,19 +23,17 @@ $transition-delay-default: 0.3s;
 $transition-default: 0.3s ease-in-out;
 
 $breakpoints: (
-	mobile-small: 575px,
-	mobile: 767px,
-	admin-bar: 782px,
-	tablet: 1023px,
-	small-desktop: 1279px,
-	desktop: 1439px,
-	large-desktop: 1719px,
+  mobile-small: 575px,
+  mobile: 767px,
+  admin-bar: 782px,
+  tablet: 1023px,
+  small-desktop: 1279px,
+  desktop: 1439px,
+  large-desktop: 1719px // x-large-desktop: 1919px
 );
 
 // Other
 
-
 // Admin panel
 $adminbarHeightDesktop: 32px;
 $adminbarHeightMobile: 46px;
-
