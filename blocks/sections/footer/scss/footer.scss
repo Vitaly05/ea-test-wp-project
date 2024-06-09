@@ -10,33 +10,28 @@
 	Blocks: Section Footer
 \* ------------------------------------------------------------ */
 
-.footer {
-  position: relative;
-  overflow: hidden;
-
-  background-color: $white;
-}
-
 .top-footer {
-  margin-top: 70px;
-  margin-bottom: 50px;
-  margin-left: 40px;
-  margin-right: 40px;
+  .container {
+    margin-top: 70px;
+    margin-bottom: 50px;
 
-  @include breakpoint-up(mobile) {
-    margin: 0;
-    margin-top: 100px;
-    margin-bottom: 70px;
-  }
+    width: 100%;
 
-  @include breakpoint-up(small-desktop) {
-    margin: 0;
-    margin-top: 136px;
-    margin-bottom: 100px;
+    background-color: $white;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include breakpoint-up(mobile) {
+      margin-top: 100px;
+      margin-bottom: 70px;
+    }
+
+    @include breakpoint-up(small-desktop) {
+      margin-top: 136px;
+      margin-bottom: 100px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }
 
@@ -49,11 +44,7 @@
 
 .top-footer__navigation {
   @include breakpoint-up(mobile) {
-    margin-left: 80px;
-  }
-
-  @include breakpoint-up(small-desktop) {
-    margin: 0;
+    margin-left: 40px;
   }
 }
 
@@ -98,11 +89,11 @@
 
   @include breakpoint-up(mobile) {
     margin-top: 0;
-    margin-right: 64px;
+    margin-right: 24px;
   }
 
   @include breakpoint-up(small-desktop) {
-    margin: 0;
+    margin-top: 0;
     margin-left: 255px;
     margin-right: 128px;
   }
@@ -211,6 +202,59 @@
     --cols-count: 2;
     --rows-count: 2;
 
-    margin: 0;
+    margin-top: 0;
+  }
+}
+
+.footer__separator {
+  width: 100%;
+  height: 3px;
+
+  background-color: $color-primary;
+}
+
+.bottom-footer {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  @include breakpoint-up(mobile) {
+    flex-direction: row;
+  }
+}
+
+.bottom-footer__text {
+  color: $text-secondary;
+  opacity: 0.5;
+
+  font-family: 'BankGothic';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: -0.05em;
+}
+
+.bottom-footer__by {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+
+  svg {
+    width: 95px;
+    height: 28px;
+
+    color: $text-secondary;
+  }
+
+  @include breakpoint-up(mobile) {
+    flex-direction: row;
+    gap: 15px;
   }
 }
