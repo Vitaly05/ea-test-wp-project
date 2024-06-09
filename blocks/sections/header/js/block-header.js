@@ -14,8 +14,10 @@ const init = function() {
   menuButton.addEventListener('click', () => {
     if (headerMenu.classList.contains(headerMenuShowClass)) {
       headerMenu.classList.remove(headerMenuShowClass)
+      setTabIndex('.js-header-menu a', -1)
     } else {
       headerMenu.classList.add(headerMenuShowClass)
+      setTabIndex('.js-header-menu a', 0)
     }
   })
 
@@ -31,6 +33,14 @@ const init = function() {
 
   const target = document.querySelector('.js-collapse-header')
   observer.observe(target)
+
+  setTabIndex('.js-header-menu a', -1)
+
+  function setTabIndex(selector, value) {
+    $(selector).each(function() {
+      $(this).attr('tabindex', value)
+    })
+  }
 }
 
 initScript( '.header', 'header', init )

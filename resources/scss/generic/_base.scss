@@ -597,3 +597,11 @@ svg.logo {
     background-size: 100% 2px;
   }
 }
+
+.button,
+.button-icon,
+a {
+  &:focus-visible {
+    box-shadow: 0px 0px 0px 2px $color-primary-hover;
+  }
+}

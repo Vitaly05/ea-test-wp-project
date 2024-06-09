@@ -239,15 +239,26 @@
   align-items: center;
   gap: 5px;
 
+  @include breakpoint-up(mobile) {
+    flex-direction: row;
+    gap: 15px;
+  }
+}
+
+.by__icon {
   svg {
     width: 95px;
     height: 28px;
 
     color: $text-secondary;
+    opacity: 0.5;
+
+    transition: opacity $transition-default;
   }
 
-  @include breakpoint-up(mobile) {
-    flex-direction: row;
-    gap: 15px;
+  &:hover {
+    svg {
+      opacity: 1;
+    }
   }
 }

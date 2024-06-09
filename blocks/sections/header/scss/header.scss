@@ -13,6 +13,24 @@
 .header {
   display: flex;
   justify-content: center;
+
+  .header__open-menu-img {
+    display: block;
+  }
+
+  .header__close-menu-img {
+    display: none;
+  }
+
+  &:has(.header__menu--show) {
+    .header__open-menu-img {
+      display: none;
+    }
+
+    .header__close-menu-img {
+      display: block;
+    }
+  }
 }
 
 .header__sticky {
