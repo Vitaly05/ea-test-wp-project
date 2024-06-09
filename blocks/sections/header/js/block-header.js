@@ -21,18 +21,15 @@ const init = function() {
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      console.log($('.js-sticky-header'), $('.js-sticky-header').first())
       if (!entry.isIntersecting) {
         $('.js-sticky-header').addClass('header__sticky--collapse')
       } else {
         $('.js-sticky-header').removeClass('header__sticky--collapse')
       }
     })
-  }, {
-    threshold: 0.15
   })
 
-  const target = document.querySelector('.section-hero')
+  const target = document.querySelector('.js-collapse-header')
   observer.observe(target)
 }
 
