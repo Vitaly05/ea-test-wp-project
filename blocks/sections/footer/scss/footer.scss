@@ -10,23 +10,25 @@
 	Blocks: Section Footer
 \* ------------------------------------------------------------ */
 
+.footer {
+  background-color: $background-main;
+}
+
 .top-footer {
   .container {
-    margin-top: 70px;
-    margin-bottom: 50px;
+    padding-top: 70px;
+    padding-bottom: 50px;
 
     width: 100%;
 
-    background-color: $white;
-
     @include breakpoint-up(mobile) {
-      margin-top: 100px;
-      margin-bottom: 70px;
+      padding-top: 100px;
+      padding-bottom: 70px;
     }
 
     @include breakpoint-up(small-desktop) {
-      margin-top: 136px;
-      margin-bottom: 100px;
+      padding-top: 136px;
+      padding-bottom: 100px;
 
       display: flex;
       justify-content: center;

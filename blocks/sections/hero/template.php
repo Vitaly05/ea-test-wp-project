@@ -31,12 +31,14 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
   <div class="section-hero">
     <div class="container">
       <div class="hero-menu">
-        <a class="hero-menu__link hero-menu__link--active" href="javascript:void(0)">Main</a>
-        <a class="hero-menu__link" href="javascript:void(0)">About Us</a>
-        <a class="hero-menu__link" href="javascript:void(0)">Contact Us</a>
-        <a class="hero-menu__link" href="javascript:void(0)">Before & After</a>
-        <a class="hero-menu__link" href="javascript:void(0)">Resources</a>
-        <a class="hero-menu__link" href="javascript:void(0)">Payment</a>
+        <a class="hero-menu__link hero-menu__link--active" href="javascript:void(0)"
+          aria-label="Перейти на главную страницу">Main</a>
+        <a class="hero-menu__link" href="javascript:void(0)" aria-label="Перейти на страницу 'о нас'">About Us</a>
+        <a class="hero-menu__link" href="javascript:void(0)" aria-label="Связаться с нами">Contact Us</a>
+        <a class="hero-menu__link" href="javascript:void(0)" aria-label="Перейти на страницу 'до и после'">Before &
+          After</a>
+        <a class="hero-menu__link" href="javascript:void(0)" aria-label="Перейти к ресурсам">Resources</a>
+        <a class="hero-menu__link" href="javascript:void(0)" aria-label="Перейти на страницу оплаты">Payment</a>
       </div>
       <div class="hero-intro">
         <div class="hero-intro__title">The<br class="hero-title-br" /> Happy Fitness</div>
@@ -44,10 +46,10 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
           Macon's Premiere Boutuque Personal Training Studio
         </div>
         <div class="hero-intro__actions">
-          <button class="button">
+          <button class="button" aria-label="Перейти на страницу консультации">
             Book Consultation
           </button>
-          <button class="button button--outline">
+          <button class="button button--outline" aria-label="Смотреть видео">
             <svg class="button__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_408_4555)">
@@ -65,6 +67,101 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
           </button>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="gallery">
+    <div class="gallery__title">our gallery</div>
+    <div class="gallery__text">A fitness training center for<br> women, by women</div>
+    <div class="gallery__photos">
+      <button class="photo-card">
+        <div class="background-img">
+          <img class="photo-card__img" src="/wp-content/themes/testproject/resources/images/gallery/1.jpg"
+            alt="gallery 1">
+          <div class="background-filter"></div>
+        </div>
+        <div class="photo-card__title">Beginners Welcome</div>
+        <div class="photo-card__text">2 Photos</div>
+      </button>
+      <button class="photo-card">
+        <div class="background-img">
+          <img class="photo-card__img" src="/wp-content/themes/testproject/resources/images/gallery/2.jpg"
+            alt="gallery 1">
+          <div class="background-filter"></div>
+        </div>
+        <div class="photo-card__title">Virtual/Hybrid Training</div>
+        <div class="photo-card__text">2 Photos</div>
+      </button>
+      <button class="photo-card">
+        <div class="background-img">
+          <img class="photo-card__img" src="/wp-content/themes/testproject/resources/images/gallery/3.jpg"
+            alt="gallery 1">
+          <div class="background-filter"></div>
+        </div>
+        <div class="photo-card__title">Personal Training</div>
+        <div class="photo-card__text">5 Photos</div>
+      </button>
+      <button class="photo-card">
+        <div class="background-img">
+          <img class="photo-card__img" src="/wp-content/themes/testproject/resources/images/gallery/4.jpg"
+            alt="gallery 1">
+          <div class="background-filter"></div>
+        </div>
+        <div class="photo-card__title">On-Demand Programs</div>
+        <div class="photo-card__text">2 Photos</div>
+      </button>
+      <button class="photo-card">
+        <div class="background-img">
+          <img class="photo-card__img" src="/wp-content/themes/testproject/resources/images/gallery/5.jpg"
+            alt="gallery 1">
+          <div class="background-filter"></div>
+        </div>
+        <div class="photo-card__title">The mind fitness</div>
+        <div class="photo-card__text">2 Photos</div>
+      </button>
+      <button class="photo-card">
+        <div class="background-img">
+          <img class="photo-card__img" src="/wp-content/themes/testproject/resources/images/gallery/6.jpg"
+            alt="gallery 1">
+          <div class="background-filter"></div>
+        </div>
+        <div class="photo-card__title">Semi-Private Training for Women</div>
+        <div class="photo-card__text">2 Photos</div>
+      </button>
+      <button class="photo-card">
+        <div class="background-img">
+          <img class="photo-card__img" src="/wp-content/themes/testproject/resources/images/gallery/7.jpg"
+            alt="gallery 1">
+          <div class="background-filter"></div>
+        </div>
+        <div class="photo-card__title">Nutrition Program</div>
+        <div class="photo-card__text">2 Photos</div>
+      </button>
+      <button class="photo-card">
+        <div class="background-img">
+          <img class="photo-card__img" src="/wp-content/themes/testproject/resources/images/gallery/8.jpg"
+            alt="gallery 1">
+          <div class="background-filter"></div>
+        </div>
+        <div class="photo-card__title">Co-ed Training</div>
+        <div class="photo-card__text">2 Photos</div>
+      </button>
+      <button class="photo-card">
+        <div class="background-img">
+          <img class="photo-card__img" src="/wp-content/themes/testproject/resources/images/gallery/9.jpg"
+            alt="gallery 1">
+          <div class="background-filter"></div>
+        </div>
+        <div class="photo-card__title">Functional Fitness</div>
+        <div class="photo-card__text">2 Photos</div>
+      </button>
+    </div>
+    <div class="gallery__actions">
+      <button class="button">
+        Load More
+      </button>
     </div>
   </div>
 </section>

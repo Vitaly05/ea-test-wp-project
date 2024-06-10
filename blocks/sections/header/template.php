@@ -22,7 +22,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
     <div class="header__sticky__bg"></div>
     <div class="container">
       <div class="header__left-buttons">
-        <button class="button-icon menu-button js-menu-button">
+        <button class="button-icon menu-button js-menu-button" aria-label="Переключить показ меню">
           <div class="button-icon__icon">
             <svg class="header__open-menu-img" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_2_98)">
@@ -98,7 +98,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
         </svg>
       </a>
       <div class="header__right-buttons">
-        <button class="button-icon button-icon--outline">
+        <button class="button-icon button-icon--outline" aria-label="Перейти к контактам">
           <div class="button-icon__icon">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_23_85)">
@@ -114,7 +114,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
             </svg>
           </div>
         </button>
-        <button class="button-icon button-icon--outline">
+        <button class="button-icon button-icon--outline" aria-label="Перейти к ценам">
           <div class="button-icon__icon">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -126,7 +126,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
             </svg>
           </div>
         </button>
-        <button class="button">
+        <button class="button" aria-label="Перейти к консультации">
           Book Consultation
         </button>
       </div>
@@ -135,22 +135,23 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
   <div class="header__menu js-header-menu">
     <div class="container">
       <div class="header-menu__navigation">
-        <a class="header-menu__link header-menu__link--active" href="javascript:void(0)">
+        <a class="header-menu__link header-menu__link--active" href="javascript:void(0)"
+          aria-label="Перейти на главную">
           Main
         </a>
-        <a class="header-menu__link" href="javascript:void(0)">
+        <a class="header-menu__link" href="javascript:void(0)" aria-label="Перейти на страницу 'о нас'">
           About Us
         </a>
-        <a class="header-menu__link" href="javascript:void(0)">
+        <a class="header-menu__link" href="javascript:void(0)" aria-label="Связаться с нами">
           Contact Us
         </a>
-        <a class="header-menu__link" href="javascript:void(0)">
+        <a class="header-menu__link" href="javascript:void(0)" aria-label="Перейти на страницу 'до и после'">
           Befor & Afters
         </a>
-        <a class="header-menu__link" href="javascript:void(0)">
+        <a class="header-menu__link" href="javascript:void(0)" aria-label="Перейти к ресурсам">
           Resources
         </a>
-        <a class="header-menu__link" href="javascript:void(0)">
+        <a class="header-menu__link" href="javascript:void(0)" aria-label="Перейти на страницу оплаты">
           Payment
         </a>
       </div>
@@ -167,7 +168,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
             </svg>
           </div>
           <div class="contact__text">
-            <a class="underline-hover" href="javascript:void(0)">
+            <a class="underline-hover" href="javascript:void(0)" aria-label="Открыть наше местоположение в картах">
               4535 Forsyth Rd Suite 2<br /> Macon, GA 31210
             </a>
           </div>
@@ -187,12 +188,12 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
               </defs>
             </svg>
           </div>
-          <a class="contact__text underline-hover" href="tel:4782543220">
+          <a class="contact__text underline-hover" href="tel:4782543220" aria-label="Позвонить нам">
             (478) 254-3220
           </a>
         </div>
         <div class="header-menu__social">
-          <a class="header-menu__icon-link" href="javascript:void(0)">
+          <a class="header-menu__icon-link" href="javascript:void(0)" aria-label="Перейти на нашу страницу в instagram">
             <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_408_7320)">
                 <path
@@ -206,7 +207,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
               </defs>
             </svg>
           </a>
-          <a class="header-menu__icon-link" href="javascript:void(0)">
+          <a class="header-menu__icon-link" href="javascript:void(0)" aria-label="Перейти на нашу страницу в twitter">
             <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_408_7326)">
                 <path
@@ -220,7 +221,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
               </defs>
             </svg>
           </a>
-          <a class="header-menu__icon-link" href="javascript:void(0)">
+          <a class="header-menu__icon-link" href="javascript:void(0)" aria-label="Перейти на нашу страницу в facebook">
             <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_408_7322)">
                 <path
@@ -234,7 +235,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
               </defs>
             </svg>
           </a>
-          <a class="header-menu__icon-link" href="javascript:void(0)">
+          <a class="header-menu__icon-link" href="javascript:void(0)" aria-label="Перейти на наш канал на youtube">
             <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_408_7328)">
                 <path

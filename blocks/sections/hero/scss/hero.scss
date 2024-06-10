@@ -63,7 +63,7 @@
     color: $text-primary;
     opacity: 0.5;
 
-    font-family: 'Montserrat';
+    font-family: $font-main;
     font-style: normal;
     font-weight: 900;
     font-size: 22px;
@@ -110,7 +110,7 @@
   .hero-intro__title {
     color: $text-primary;
 
-    font-family: 'Montserrat';
+    font-family: $font-main;
     font-style: normal;
     font-weight: 900;
     font-size: 100px;
@@ -128,7 +128,7 @@
 
     color: $text-primary;
 
-    font-family: 'BankGothic';
+    font-family: $font-secondary;
     font-size: 24px;
     line-height: 100%;
     letter-spacing: -0.05em;
@@ -170,4 +170,196 @@
       font-size: 40px;
     }
   }
+}
+
+.gallery {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+
+  background-color: $white;
+}
+
+.gallery__title {
+  text-align: center;
+
+  color: $text-secondary;
+
+  font-family: $font-main;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+
+.gallery__text {
+  text-align: center;
+
+  color: $text-secondary;
+
+  font-family: $font-secondary;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: -0.05em;
+}
+
+.gallery__photos {
+  --cards-width: 320px;
+  --cards-height: 250px;
+  --gap: 10px;
+
+  position: relative;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap);
+
+  @include breakpoint-between(mobile, large-desktop) {
+    --cards-width: 339px;
+    --cards-height: 320px;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: calc(var(--cards-width) * 2 + var(--gap));
+
+    .photo-card:nth-child(3n) {
+      flex: 0 0 100%;
+    }
+  }
+
+  @include breakpoint-up(large-desktop) {
+    --cards-width: 379px;
+    --cards-height: 320px;
+    --gap: 28px;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: start;
+    flex: 0 0 100%;
+    max-width: calc(var(--cards-width) * 4 + var(--gap) * 3);
+
+    .photo-card:nth-child(3) {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      height: calc(var(--cards-height) * 2 + var(--gap)) !important;
+    }
+
+    .photo-card:nth-child(1),
+    .photo-card:nth-child(2) {
+      margin-left: 379px + 28px;
+    }
+
+    .photo-card:nth-child(6),
+    .photo-card:nth-child(9) {
+      flex: 1 1 33.3%;
+    }
+
+    .photo-card:nth-child(1) {
+      order: 2;
+    }
+
+    .photo-card:nth-child(2) {
+      order: 4;
+    }
+
+    .photo-card:nth-child(3) {
+      order: 1;
+    }
+
+    .photo-card:nth-child(4) {
+      order: 7;
+    }
+
+    .photo-card:nth-child(5) {
+      order: 8;
+    }
+
+    .photo-card:nth-child(6) {
+      order: 3;
+    }
+
+    .photo-card:nth-child(7) {
+      order: 5;
+    }
+
+    .photo-card:nth-child(8) {
+      order: 6;
+    }
+
+    .photo-card:nth-child(9) {
+      order: 9;
+    }
+  }
+}
+
+.photo-card {
+  position: relative;
+  z-index: 10;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 2px;
+  width: var(--cards-width);
+  height: var(--cards-height);
+
+  border: none;
+
+  transition: box-shadow $transition-default;
+
+  &:hover {
+    box-shadow: 0 0 0 2px $color-primary;
+  }
+
+  .background-filter {
+    background: $background-filter-gradient;
+  }
+}
+
+.photo-card__title {
+  position: relative;
+  z-index: inherit;
+
+  text-align: start;
+
+  color: $text-primary;
+
+  font-family: $font-secondary;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 25px;
+  word-break: normal;
+}
+
+.photo-card__text {
+  position: relative;
+  z-index: inherit;
+
+  text-align: start;
+
+  color: $text-primary;
+  opacity: 0.8;
+
+  font-family: $font-main;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: capitalize;
 }

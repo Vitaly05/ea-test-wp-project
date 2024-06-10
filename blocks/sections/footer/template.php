@@ -24,12 +24,18 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
         <div class="top-footer__navigation">
           <div class="top-footer__title">Navigation</div>
           <div class="top-footer__links">
-            <a class="top-footer__link underline-hover" href="javascript:void(0)">Main</a>
-            <a class="top-footer__link underline-hover" href="javascript:void(0)">About Us</a>
-            <a class="top-footer__link underline-hover" href="javascript:void(0)">Contact Us</a>
-            <a class="top-footer__link underline-hover" href="javascript:void(0)">Before & After</a>
-            <a class="top-footer__link underline-hover" href="javascript:void(0)">Resources</a>
-            <a class="top-footer__link underline-hover" href="javascript:void(0)">Payment</a>
+            <a class="top-footer__link underline-hover" href="javascript:void(0)"
+              aria-label="Перейти на главную страницу">Main</a>
+            <a class="top-footer__link underline-hover" href="javascript:void(0)"
+              aria-label="Перейти на страницу 'о нас'">About Us</a>
+            <a class="top-footer__link underline-hover" href="javascript:void(0)" aria-label="Связаться с нами">Contact
+              Us</a>
+            <a class="top-footer__link underline-hover" href="javascript:void(0)"
+              aria-label="Перейти на страницу 'до и после'">Before & After</a>
+            <a class="top-footer__link underline-hover" href="javascript:void(0)"
+              aria-label="Перейти к ресурсам">Resources</a>
+            <a class="top-footer__link underline-hover" href="javascript:void(0)"
+              aria-label="Перейти на страницу оплаты">Payment</a>
           </div>
         </div>
         <div class="top-footer__contacts">
@@ -46,7 +52,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
               </svg>
             </div>
             <div class="contact__text">
-              <a class="underline-hover" href="javascript:void(0)">
+              <a class="underline-hover" href="javascript:void(0)" aria-label="Открыть наше местоположение на картах'">
                 4535 Forsyth Rd Suite 2<br> Macon, GA 31210
               </a>
             </div>
@@ -66,12 +72,13 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                 </defs>
               </svg>
             </div>
-            <a class="contact__text underline-hover" href="tel:4782543220">
+            <a class="contact__text underline-hover" href="tel:4782543220" aria-label="позвонить нам">
               (478) 254-3220
             </a>
           </div>
           <div class="top-footer__social">
-            <a class="top-footer__icon-link" href="javascript:void(0)">
+            <a class="top-footer__icon-link" href="javascript:void(0)"
+              aria-label="Перейти на нашу страницу в instagram">
               <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_408_7320)">
                   <path
@@ -85,7 +92,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                 </defs>
               </svg>
             </a>
-            <a class="top-footer__icon-link" href="javascript:void(0)">
+            <a class="top-footer__icon-link" href="javascript:void(0)" aria-label="Перейти на нашу страницу в twitter">
               <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_408_7326)">
                   <path
@@ -99,7 +106,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                 </defs>
               </svg>
             </a>
-            <a class="top-footer__icon-link" href="javascript:void(0)">
+            <a class="top-footer__icon-link" href="javascript:void(0)" aria-label="Перейти на нашу страницу в facebook">
               <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_408_7322)">
                   <path
@@ -113,7 +120,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                 </defs>
               </svg>
             </a>
-            <a class="top-footer__icon-link" href="javascript:void(0)">
+            <a class="top-footer__icon-link" href="javascript:void(0)" aria-label="Перейти на наш канал на youtube">
               <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_408_7328)">
                   <path
@@ -151,7 +158,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
     </div>
     <div class="bottom-footer__by">
       <div class="bottom-footer__text">Designed & Marketed by</div>
-      <a class="by__icon" href="javascript:void(0)">
+      <a class="by__icon" href="javascript:void(0)" aria-label="Перейти на страницу дизейнера сайта">
         <svg fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0_408_7338)">
             <path
