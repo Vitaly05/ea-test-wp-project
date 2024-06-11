@@ -598,10 +598,9 @@ svg.logo {
   }
 }
 
-.button,
-.button-icon,
-a {
+a,
+button {
   &:focus-visible {
-    box-shadow: 0px 0px 0px 2px $color-primary-hover;
+    box-shadow: 0 0 0 2px $color-primary-hover;
   }
 }

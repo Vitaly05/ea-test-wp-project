@@ -334,6 +334,10 @@
     box-shadow: 0 0 0 2px $color-primary;
   }
 
+  &:focus-visible {
+    box-shadow: 0 0 0 2px $color-primary;
+  }
+
   .background-filter {
     background: $background-filter-gradient;
   }
@@ -376,8 +380,24 @@
   text-transform: capitalize;
 }
 
+.gallery__actions {
+  button {
+    &:focus-visible {
+      box-shadow: 0 0 0 2px $color-secondary;
+    }
+  }
+}
+
 .gallery__slider {
-  display: none;
+  opacity: 0;
+
+  animation: gallery__slider-animation $transition-default forwards;
+}
+
+@keyframes gallery__slider-animation {
+  to {
+    opacity: 1;
+  }
 }
 
 .gallery__slider[open] {
