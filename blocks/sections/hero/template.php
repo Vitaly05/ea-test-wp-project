@@ -121,7 +121,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
           </form>
         </div>
         <div class="modal-footer">
-          <button class="button" data-bs-dismiss="modal">Submit</button>
+          <button class="button" data-bs-dismiss="modal" aria-label="Отправить данные для консультации">Submit</button>
         </div>
       </div>
     </div>
@@ -315,7 +315,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
             <div class="tab-pane fade" id="trainings-section__body" role="tabpanel"
               aria-labelledby="trainings-section__body-tab" tabindex="0">
               <div class="trainings-section__offers-grid">
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -324,7 +324,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Brow Lift 1
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -333,7 +333,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Facelift 1
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -342,7 +342,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Septoplasty 1
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -351,7 +351,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Chin Augmentation 1
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -360,7 +360,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Morpheus8 1
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -369,7 +369,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Injectables 1
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -378,7 +378,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Ear Surgery 1
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -387,7 +387,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Neck Lift 1
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -396,7 +396,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Dysport&reg; 1
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -405,7 +405,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Eyelid Surgery 1
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -414,7 +414,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Rhinoplasty 1
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -428,7 +428,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
             <div class="tab-pane fade" id="trainings-section__breast" role="tabpanel"
               aria-labelledby="trainings-section__breast-tab" tabindex="0">
               <div class="trainings-section__offers-grid">
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -437,7 +437,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Brow Lift 2
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -446,7 +446,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Facelift 2
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -455,7 +455,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Septoplasty 2
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -464,7 +464,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Chin Augmentation 2
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -473,7 +473,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Morpheus8 2
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -482,7 +482,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Injectables 2
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -491,7 +491,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Ear Surgery 2
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -500,7 +500,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Neck Lift 2
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -509,7 +509,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Dysport&reg; 2
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -518,7 +518,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Eyelid Surgery 2
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -527,7 +527,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Rhinoplasty 2
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -541,7 +541,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
             <div class="tab-pane fade show active" id="trainings-section__buttocks" role="tabpanel"
               aria-labelledby="trainings-section__buttocks-tab" tabindex="0">
               <div class="trainings-section__offers-grid">
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -550,7 +550,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Brow Lift
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -559,7 +559,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Facelift
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -568,7 +568,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Septoplasty
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -577,7 +577,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Chin Augmentation
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -586,7 +586,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Morpheus8
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -595,7 +595,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Injectables
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -604,7 +604,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Ear Surgery
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -613,7 +613,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Neck Lift
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -622,7 +622,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Dysport&reg;
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -631,7 +631,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Eyelid Surgery
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -640,7 +640,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Rhinoplasty
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -654,7 +654,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
             <div class="tab-pane fade" id="trainings-section__mens" role="tabpanel"
               aria-labelledby="trainings-section__mens-tab" tabindex="0">
               <div class="trainings-section__offers-grid">
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -663,7 +663,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Brow Lift 4
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -672,7 +672,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Facelift 4
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -681,7 +681,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Septoplasty 4
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -690,7 +690,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Chin Augmentation 4
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -699,7 +699,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Morpheus8 4
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -708,7 +708,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Injectables 4
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -717,7 +717,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Ear Surgery 4
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -726,7 +726,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Neck Lift 4
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -735,7 +735,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Dysport&reg; 4
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -744,7 +744,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Eyelid Surgery 4
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -753,7 +753,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                     Rhinoplasty 4
                   </span>
                 </a>
-                <a class="offers-grid__item">
+                <a class="offers-grid__item" href="javascript:void(0)">
                   <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
                       stroke-linecap="round" stroke-linejoin="round" />
