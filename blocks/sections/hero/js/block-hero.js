@@ -16,6 +16,9 @@ console.log('eeee')
 
     const sliderRound = $('<button class="slider__round"></button>')
     sliderRound.on('click', function() {
+      if ($(this).hasClass('slider__round--active')) {
+        return
+      }
       currentIndex = i
       onSliderMove(currentIndex)
     })

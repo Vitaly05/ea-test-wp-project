@@ -532,7 +532,7 @@
       border-color $transition-default,
       background-color $transition-default;
 
-    &:hover {
+    &:not(.slider__round--active):hover {
       border-color: $color-secondary;
     }
   }
