@@ -6,7 +6,7 @@ import { initScript } from '../../../../resources/js/utils/init-script'
 
 const init = function() {
 	const $section = $( this );
-console.log('eeee')
+  
   const slider = document.querySelector('.js-gallery-slider')
   const sliderPhoto = slider.querySelector('.slider__photo')
 
