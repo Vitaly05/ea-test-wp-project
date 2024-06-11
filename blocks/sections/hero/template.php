@@ -99,14 +99,24 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
         <div class="modal-body">
           <form>
             <div class="modal-body__row">
-              <input class="text-field" type="text" name="first-name" placeholder="First Name" />
-              <input class="text-field" type="text" name="last-name" placeholder="Last Name" />
+              <div class="text-field-wrap" data-placeholder="First Name">
+                <input class="text-field" type="text" name="first-name" placeholder="" />
+              </div>
+              <div class="text-field-wrap" data-placeholder="Last Name">
+                <input class="text-field" type="text" name="last-name" placeholder="" />
+              </div>
             </div>
             <div class="modal-body__row">
-              <input class="text-field" type="email" name="email" placeholder="Email" />
-              <input class="text-field" type="text" name="phone-number" placeholder="Phone Number" />
+              <div class="text-field-wrap" data-placeholder="Email">
+                <input class="text-field" type="email" autocomplete="email" name="email" placeholder="" />
+              </div>
+              <div class="text-field-wrap" data-placeholder="Phone Number">
+                <input class="text-field" type="text" name="phone-number" placeholder="" />
+              </div>
             </div>
-            <textarea class="text-field js-vertical-scroll" name="message" placeholder="Message"></textarea>
+            <div class="text-field-wrap" data-placeholder="Message">
+              <textarea class="text-field js-vertical-scroll" name="message" placeholder=""></textarea>
+            </div>
             <input type="submit" hidden />
           </form>
         </div>

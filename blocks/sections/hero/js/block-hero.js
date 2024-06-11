@@ -10,6 +10,12 @@ const init = function() {
 
   verticalScroll($('#consultation-modal'))
 
+  $('.text-field-wrap').each(function() {
+    $(this).on('click', function() {
+      $(this).find('.text-field').first().trigger('focus')
+    })
+  })
+
 
 
   // OFFERS
