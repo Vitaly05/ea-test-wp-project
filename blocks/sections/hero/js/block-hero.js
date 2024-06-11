@@ -6,7 +6,7 @@ import { initScript } from '../../../../resources/js/utils/init-script'
 
 const init = function() {
 	const $section = $( this );
-  
+
   const slider = document.querySelector('.js-gallery-slider')
   const sliderPhoto = slider.querySelector('.slider__photo')
 
@@ -35,7 +35,6 @@ const init = function() {
       e.stopPropagation()
 
       currentIndex = images.indexOf(imageSrc)
-      console.log(currentIndex)
       onOpenSlider(currentIndex)
       slider.showModal()
     })
