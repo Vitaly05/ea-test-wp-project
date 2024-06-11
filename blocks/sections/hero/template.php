@@ -46,7 +46,8 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
           Macon's Premiere Boutuque Personal Training Studio
         </div>
         <div class="hero-intro__actions">
-          <button class="button" aria-label="Перейти на страницу консультации">
+          <button class="button" data-bs-toggle="modal" data-bs-target="#consultation-modal"
+            aria-label="Перейти к консультации">
             Book Consultation
           </button>
           <button class="button button--outline" aria-label="Смотреть видео">
@@ -65,6 +66,52 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
             </svg>
             Play Video
           </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade modal-lg consultation-modal" id="consultation-modal" tabindex="-1"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть окно консультации">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_408_7077)">
+                <path
+                  d="M11.1049 10.001L19.7712 1.3347C20.0763 1.02958 20.0763 0.534892 19.7712 0.229814C19.4661 -0.0752636 18.9714 -0.0753026 18.6663 0.229814L9.99999 8.89613L1.33372 0.229814C1.0286 -0.0753026 0.533915 -0.0753026 0.228837 0.229814C-0.0762401 0.534931 -0.0762791 1.02962 0.228837 1.3347L8.89511 10.001L0.228837 18.6673C-0.0762791 18.9724 -0.0762791 19.4671 0.228837 19.7722C0.381376 19.9247 0.581337 20.001 0.781297 20.001C0.981258 20.001 1.18118 19.9247 1.33376 19.7722L9.99999 11.1059L18.6663 19.7722C18.8188 19.9247 19.0188 20.001 19.2187 20.001C19.4187 20.001 19.6186 19.9247 19.7712 19.7722C20.0763 19.4671 20.0763 18.9724 19.7712 18.6673L11.1049 10.001Z"
+                  fill="white" />
+              </g>
+              <defs>
+                <clipPath id="clip0_408_7077">
+                  <rect width="20" height="20" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+          <div class="modal-title">Book<br>Consultation</div>
+          <div class="modal-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisis nullam pretium lectus est non arcu diam
+            in varius.
+          </div>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="modal-body__row">
+              <input class="text-field" type="text" name="first-name" placeholder="First Name" />
+              <input class="text-field" type="text" name="last-name" placeholder="Last Name" />
+            </div>
+            <div class="modal-body__row">
+              <input class="text-field" type="email" name="email" placeholder="Email" />
+              <input class="text-field" type="text" name="phone-number" placeholder="Phone Number" />
+            </div>
+            <textarea class="text-field js-vertical-scroll" name="message" placeholder="Message"></textarea>
+            <input type="submit" hidden />
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="button" data-bs-dismiss="modal">Submit</button>
         </div>
       </div>
     </div>
@@ -208,3 +255,510 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
     </dialog>
   </div>
 </section>
+
+<section>
+  <div class="trainings-section">
+    <div class="container">
+      <div class="trainings-section__text-block">
+        <div class="trainings-section__title">OUR trainings</div>
+        <div class="trainings-section__heading">What We Offer</div>
+        <div class="trainings-section__text">
+          The Happy Fitness has it going on!!! I love this gym, the staff and all the members. I have been in different
+          gyms all my life and the Happy Fitness is the best by far. The staff are very knowledgeable about all aspects
+          of
+          exercise and nutrition. Whether you are using the trainers or not, they will always help make sure you are
+          doing
+          the exercises correctly so you get the best benefit and do not hurt yourself. I never thought I would care one
+          way or the other if I was in an all female gym, but now that I am I truly love it. The other aspect I love
+          about
+          this gym is the cleanliness. The staff works very hard keeping the gym orderly and spotless. Check it out...I
+          promise you it won't disappoint!!
+        </div>
+      </div>
+      <div class="trainings-section__offers" id="trainings-section__offers">
+        <div class="trainings-section__tabs js-horizontal-scroll">
+          <ul class="nav nav-tabs" id="trainings-section__tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="trainings-section__body-tab" data-bs-toggle="tab"
+                data-bs-target="#trainings-section__body" type="button" role="tab"
+                aria-controls="trainings-section__body" aria-selected="false">Body</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="trainings-section__breast-tab" data-bs-toggle="tab"
+                data-bs-target="#trainings-section__breast" type="button" role="tab"
+                aria-controls="trainings-section__breast" aria-selected="false">Breast</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="trainings-section__buttocks-tab" data-bs-toggle="tab"
+                data-bs-target="#trainings-section__buttocks" type="button" role="tab"
+                aria-controls="trainings-section__buttocks" aria-selected="true">Buttocks</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="trainings-section__mens-tab" data-bs-toggle="tab"
+                data-bs-target="#trainings-section__mens" type="button" role="tab"
+                aria-controls="trainings-section__mens" aria-selected="false">Mens</button>
+            </li>
+          </ul>
+        </div>
+        <div class="trainings-section__items">
+          <div class="tab-content" id="trainings-section__tab-content">
+            <div class="tab-pane fade" id="trainings-section__body" role="tabpanel"
+              aria-labelledby="trainings-section__body-tab" tabindex="0">
+              <div class="trainings-section__offers-grid">
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Brow Lift 1
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Facelift 1
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Septoplasty 1
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Chin Augmentation 1
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Morpheus8 1
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Injectables 1
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Ear Surgery 1
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Neck Lift 1
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Dysport&reg; 1
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Eyelid Surgery 1
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Rhinoplasty 1
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    AccuTite&trade; and FaceTite&reg; 1
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="trainings-section__breast" role="tabpanel"
+              aria-labelledby="trainings-section__breast-tab" tabindex="0">
+              <div class="trainings-section__offers-grid">
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Brow Lift 2
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Facelift 2
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Septoplasty 2
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Chin Augmentation 2
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Morpheus8 2
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Injectables 2
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Ear Surgery 2
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Neck Lift 2
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Dysport&reg; 2
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Eyelid Surgery 2
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Rhinoplasty 2
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    AccuTite&trade; and FaceTite&reg; 2
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="tab-pane fade show active" id="trainings-section__buttocks" role="tabpanel"
+              aria-labelledby="trainings-section__buttocks-tab" tabindex="0">
+              <div class="trainings-section__offers-grid">
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Brow Lift
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Facelift
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Septoplasty
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Chin Augmentation
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Morpheus8
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Injectables
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Ear Surgery
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Neck Lift
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Dysport&reg;
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Eyelid Surgery
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Rhinoplasty
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    AccuTite&trade; and FaceTite&reg;
+                  </span>
+                </a>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="trainings-section__mens" role="tabpanel"
+              aria-labelledby="trainings-section__mens-tab" tabindex="0">
+              <div class="trainings-section__offers-grid">
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Brow Lift 4
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Facelift 4
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Septoplasty 4
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Chin Augmentation 4
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Morpheus8 4
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Injectables 4
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Ear Surgery 4
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Neck Lift 4
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Dysport&reg; 4
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Eyelid Surgery 4
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    Rhinoplasty 4
+                  </span>
+                </a>
+                <a class="offers-grid__item">
+                  <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.67188 10.5L9.17187 7L5.67188 3.5" stroke="#FF368A" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  <span class="offer__text">
+                    AccuTite&trade; and FaceTite&reg; 4
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>

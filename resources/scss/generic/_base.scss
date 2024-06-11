@@ -2,6 +2,28 @@
 	Base
 \* ------------------------------------------------------------ */
 
+.preloader {
+  position: fixed;
+  z-index: 999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  background-color: $white;
+
+  .loader-lottie {
+    width: auto;
+    height: 80dvh;
+  }
+
+  &.is-visually-hidden {
+    display: none;
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -603,4 +625,53 @@ button {
   &:focus-visible {
     box-shadow: 0 0 0 2px $color-primary-hover;
   }
+}
+
+.text-field {
+  padding: 20px;
+
+  width: 100%;
+  height: 56px;
+
+  border: 1px solid transparentize($color-secondary, 0.5);
+  border-radius: 2px;
+  color: $text-secondary;
+
+  transition: border-color $transition-default;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+
+  &::placeholder {
+    color: transparentize($color-secondary, 0.5);
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+  }
+
+  &:hover,
+  &:focus-visible {
+    border-color: $color-secondary;
+  }
+
+  @include breakpoint-down(mobile) {
+    height: 44px;
+    padding: 15px;
+
+    font-size: 14px;
+  }
+}
+
+textarea.text-field {
+  min-height: 56px;
+  max-height: 200px;
+
+  resize: vertical;
+  overflow: hidden;
 }

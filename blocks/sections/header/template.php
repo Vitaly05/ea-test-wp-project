@@ -57,7 +57,6 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                 </clipPath>
               </defs>
             </svg>
-
           </div>
           <div class="button-icon__text underline-hover">
             Menu
@@ -126,7 +125,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
             </svg>
           </div>
         </button>
-        <button class="button" aria-label="Перейти к консультации">
+        <button class="button" data-bs-toggle="modal" data-bs-target="#consultation-modal" aria-label="Перейти к консультации">
           Book Consultation
         </button>
       </div>

@@ -2,10 +2,23 @@
  * Internal Dependencies
  */
 import { initScript } from '../../../../resources/js/utils/init-script'
+import horizontalScroll, { verticalScroll } from '../../../../resources/js/modules/horizontal-scroll';
 
 
 const init = function() {
 	const $section = $( this );
+
+  verticalScroll($('#consultation-modal'))
+
+
+
+  // OFFERS
+
+  horizontalScroll($('#trainings-section__offers'))
+
+
+
+  // GALLERY
 
   const slider = document.querySelector('.js-gallery-slider')
   const sliderPhoto = slider.querySelector('.slider__photo')
