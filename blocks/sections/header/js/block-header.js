@@ -5,7 +5,7 @@ import { initScript } from '../../../../resources/js/utils/init-script'
 
 const init = function() {
 	const $section = $( this )
-  
+
   const menuButton = document.querySelector('.js-menu-button')
   const headerMenu = document.querySelector('.js-header-menu')
   
