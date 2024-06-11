@@ -2,17 +2,18 @@
 	Generic
 \* ------------------------------------------------------------ */
 
-@import "generic/functions";
-@import "generic/mixins";
-@import "generic/variables";
-@import "generic/reset";
-@import "generic/fonts";
-@import "generic/base";
-@import "generic/helpers";
-@import "generic/swiper";
+@import 'generic/functions';
+@import 'generic/mixins';
+@import 'generic/variables';
+@import 'generic/reset';
+@import 'generic/fonts';
+@import 'generic/base';
+@import 'generic/helpers';
+@import 'generic/swiper';
 
-@import "bootstrap/bootstrap-grid.scss";
-@import "bootstrap/bootstrap-gaps.scss";
+@import 'bootstrap/bootstrap-grid.scss';
+@import 'bootstrap/bootstrap-modal.scss';
+@import 'bootstrap/bootstrap-tab.scss';
 
 /* ------------------------------------------------------------ *\
 	Overwrites
