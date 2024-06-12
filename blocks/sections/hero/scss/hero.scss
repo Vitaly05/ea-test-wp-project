@@ -765,13 +765,8 @@
     margin-left: auto;
     margin-right: auto;
 
+    flex-wrap: nowrap;
     width: max-content;
-  }
-
-  @include breakpoint-down(mobile-small) {
-    .nav-tabs {
-      flex-wrap: nowrap;
-    }
   }
 
   .nav-link {

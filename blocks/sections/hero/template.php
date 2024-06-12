@@ -100,22 +100,29 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
           <form>
             <div class="modal-body__row">
               <div class="text-field-wrap" data-placeholder="First Name">
-                <input class="text-field" type="text" name="first-name" placeholder="" />
+                <label class="visibility-hidden" for="first-name-input">Имя</label>
+                <input class="text-field" id="first-name-input" type="text" name="first-name" placeholder="" />
               </div>
               <div class="text-field-wrap" data-placeholder="Last Name">
-                <input class="text-field" type="text" name="last-name" placeholder="" />
+                <label class="visibility-hidden" for="last-name-input">Фамилия</label>
+                <input class="text-field" id="last-name-input" type="text" name="last-name" placeholder="" />
               </div>
             </div>
             <div class="modal-body__row">
               <div class="text-field-wrap" data-placeholder="Email">
-                <input class="text-field" type="email" autocomplete="email" name="email" placeholder="" />
+                <label class="visibility-hidden" for="email-input">Почта</label>
+                <input class="text-field" id="email-input" type="email" autocomplete="email" name="email"
+                  placeholder="" />
               </div>
               <div class="text-field-wrap" data-placeholder="Phone Number">
-                <input class="text-field" type="text" name="phone-number" placeholder="" />
+                <label class="visibility-hidden" for="phone-number-input">Номер телефона</label>
+                <input class="text-field" id="phone-number-input" type="text" name="phone-number" placeholder="" />
               </div>
             </div>
             <div class="text-field-wrap" data-placeholder="Message">
-              <textarea class="text-field js-vertical-scroll" name="message" placeholder=""></textarea>
+              <label class="visibility-hidden" for="message-input">Сообщение</label>
+              <textarea class="text-field js-vertical-scroll" id="message-input" name="message"
+                placeholder=""></textarea>
             </div>
             <input type="submit" hidden />
           </form>
