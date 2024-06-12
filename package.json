@@ -20,7 +20,7 @@
 		"bootstrap": "^5.2.3",
 		"jquery.scrollbar": "^0.2.11",
 		"select2": "^4.0.0",
-		"swiper": "^8.4.6",
+		"swiper": "^8.4.7",
 		"youtube-player": "^5.5.2"
 	},
 	"devDependencies": {

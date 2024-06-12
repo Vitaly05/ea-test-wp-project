@@ -3,6 +3,7 @@
  */
 import { initScript } from '../../../../resources/js/utils/init-script'
 import horizontalScroll, { verticalScroll } from '../../../../resources/js/modules/horizontal-scroll';
+import Swiper, { Navigation, Pagination } from 'swiper';
 
 
 const init = function() {
@@ -21,6 +22,45 @@ const init = function() {
   // OFFERS
 
   horizontalScroll($('#trainings-section__offers'))
+
+
+
+  // REVIEWS
+
+  const reviewsSwiper = new Swiper('#reviews__swiper', {
+    modules: [Navigation, Pagination],
+
+    loop: true,
+
+    navigation: {
+      nextEl: '#reviews__slider-button-next',
+      prevEl: '#reviews__slider-button-prev',
+    },
+
+    pagination: {
+      el: '#reviews__slider-pagination',
+      clickable: true
+    }
+  });
+
+
+  // RESULTS
+
+  const resultsSwiper = new Swiper('#results__swiper', {
+    modules: [Navigation, Pagination],
+
+    loop: true,
+
+    navigation: {
+      nextEl: '#results__slider-button-next',
+      prevEl: '#results__slider-button-prev',
+    },
+
+    pagination: {
+      el: '#results__slider-pagination',
+      clickable: true
+    }
+  });
 
 
 
