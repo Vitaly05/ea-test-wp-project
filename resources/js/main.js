@@ -7,6 +7,7 @@
 import "./modules/hide-preloader";
 import "./modules/horizontal-scroll";
 import "./modules/bootstrap/bootstrap";
+import "./modules/beforeAfter";
 import hideFocusOnDesktop from "./modules/hide-focus-on-desktop";
 import updateStyleVariables from "./modules/resize-dependent";
 

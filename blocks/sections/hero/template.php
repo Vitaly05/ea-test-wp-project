@@ -466,43 +466,49 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="results__before-after">
-                  <div class="before-after__img">
-                    <img src="/wp-content/themes/testproject/resources/images/before-after/test-b-1.jpg"
-                      alt="Человек до">
-                    <div class="before-after__text">Before</div>
+                  <div class="result-slider ba-slider">
+                    <img src="/wp-content/themes/testproject/resources/images/before-after/a-1.jpg" alt="Человек после">
+                    <div class="resize">
+                      <img class="before-after__img"
+                        src="/wp-content/themes/testproject/resources/images/before-after/b-1.jpg" alt="Человек до">
+                    </div>
+                    <span class="handle"></span>
                   </div>
-                  <div class="before-after__img">
-                    <img src="/wp-content/themes/testproject/resources/images/before-after/test-a-1.jpg"
-                      alt="Человек после">
-                    <div class="before-after__text">After</div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="results__before-after">
-                  <div class="before-after__img">
-                    <img src="/wp-content/themes/testproject/resources/images/before-after/test-b-1.jpg"
-                      alt="Человек до">
-                    <div class="before-after__text">Before 2</div>
-                  </div>
-                  <div class="before-after__img">
-                    <img src="/wp-content/themes/testproject/resources/images/before-after/test-a-1.jpg"
-                      alt="Человек после">
-                    <div class="before-after__text">After 2</div>
+                  <div class="before-after__text">
+                    <span>Before</span>
+                    <span>After</span>
                   </div>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="results__before-after">
-                  <div class="before-after__img">
-                    <img src="/wp-content/themes/testproject/resources/images/before-after/test-b-1.jpg"
-                      alt="Человек до">
-                    <div class="before-after__text">Before 3</div>
+                  <div class="result-slider ba-slider">
+                    <img src="/wp-content/themes/testproject/resources/images/before-after/a-2.jpg" alt="Человек после">
+                    <div class="resize">
+                      <img class="before-after__img"
+                        src="/wp-content/themes/testproject/resources/images/before-after/b-2.jpg" alt="Человек до">
+                    </div>
+                    <span class="handle"></span>
                   </div>
-                  <div class="before-after__img">
-                    <img src="/wp-content/themes/testproject/resources/images/before-after/test-a-1.jpg"
-                      alt="Человек после">
-                    <div class="before-after__text">After 3</div>
+                  <div class="before-after__text">
+                    <span>Before</span>
+                    <span>After</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="results__before-after">
+                  <div class="result-slider ba-slider">
+                    <img src="/wp-content/themes/testproject/resources/images/before-after/a-3.jpg" alt="Человек после">
+                    <div class="resize">
+                      <img class="before-after__img"
+                        src="/wp-content/themes/testproject/resources/images/before-after/b-3.jpg" alt="Человек до">
+                    </div>
+                    <span class="handle"></span>
+                  </div>
+                  <div class="before-after__text">
+                    <span>Before</span>
+                    <span>After</span>
                   </div>
                 </div>
               </div>

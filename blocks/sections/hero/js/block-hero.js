@@ -50,6 +50,7 @@ const init = function() {
     modules: [Navigation, Pagination],
 
     loop: true,
+    allowTouchMove: false,
 
     navigation: {
       nextEl: '#results__slider-button-next',
@@ -61,6 +62,10 @@ const init = function() {
       clickable: true
     }
   });
+
+  $('.result-slider').each(function() {
+    $(this).beforeAfter()
+  })
 
 
 
