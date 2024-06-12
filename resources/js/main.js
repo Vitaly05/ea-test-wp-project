@@ -1,8 +1,9 @@
 /**
  * Internal Dependencies
  */
-import "bootstrap/js/dist/modal";
-import "bootstrap/js/dist/collapse";
+
+// import "bootstrap/js/dist/modal";
+// import "bootstrap/js/dist/collapse";
 import "./modules/hide-preloader";
 import "./modules/horizontal-scroll";
 import "./modules/bootstrap/bootstrap";
