@@ -1301,12 +1301,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 100%;
   width: var(--width);
   height: calc(var(--height) + var(--text-mt) + var(--text-mb) + var(--text-font-size));
 
   @include breakpoint-down(large-desktop) {
     --height: 510px;
-    --width: 390px;
+    --width: 310px;
   }
 
   @include breakpoint-down(mobile) {
@@ -1340,7 +1341,7 @@
     position: relative;
 
     width: 100%;
-    height: 100%;
+    // height: 100%;
 
     overflow: hidden;
     border-radius: 2px;
@@ -1364,39 +1365,49 @@
 
     overflow: hidden;
   }
+}
 
-  .ba-slider .handle {
-    cursor: ew-resize;
+.ba-slider .handle {
+  cursor: ew-resize;
 
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  transform: translateX(-50%);
 
-    width: 3px;
+  display: block;
+  width: 3px;
 
-    background: $white;
-  }
+  background: $white;
+}
 
-  .ba-slider .handle:after {
-    content: '';
+.ba-slider .handle:after {
+  content: '';
 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-    width: 9px;
-    height: 60px;
+  display: block;
+  width: 9px;
+  height: 60px;
 
-    background-color: $color-secondary;
-    border: 0.5px solid $white;
+  background-color: $color-secondary;
+  border: 0.5px solid $white;
 
-    transition: background-color $transition-default;
-  }
+  transition: background-color $transition-default;
+}
 
-  .ba-slider .handle.ba-draggable:after {
-    background-color: $color-primary;
+.ba-slider .handle.ba-draggable:after {
+  background-color: $color-primary;
+}
+
+.swiper-slide:not(.swiper-slide-active) {
+  .ba-slider .handle,
+  .ba-slider .handle:after,
+  .before-after__text {
+    display: none;
   }
 }
