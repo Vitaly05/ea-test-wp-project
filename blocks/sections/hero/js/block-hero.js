@@ -4,6 +4,7 @@
 import { initScript } from '../../../../resources/js/utils/init-script'
 import horizontalScroll, { verticalScroll } from '../../../../resources/js/modules/horizontal-scroll';
 import Swiper, { Navigation, Pagination, EffectCoverflow } from 'swiper';
+import YouTubePlayer from 'youtube-player';
 
 
 const init = function() {
@@ -18,10 +19,23 @@ const init = function() {
   })
 
 
+  const modalYtPlayer = YouTubePlayer('modal-yt-player')
+  modalYtPlayer.loadVideoById('TyjgGSTA0QQ')
+
+  $('#yt-video-modal').on('shown.bs.modal', function() {
+    stopAllVideos()
+    modalYtPlayer.playVideo()
+  })
+
+  $('#yt-video-modal').on('hide.bs.modal', function() {
+    modalYtPlayer.pauseVideo()
+  })
+
   const modalPlayer = $('#modal__video-1').get(0)
   const modalPlayerButton = $('[data-player-id="modal__video-1"]')
   
   $('#video-modal').on('shown.bs.modal', function() {
+    stopAllVideos()
     startPlayer(modalPlayer, modalPlayerButton)
   })
 

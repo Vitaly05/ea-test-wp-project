@@ -50,7 +50,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
             aria-label="Перейти к консультации">
             Book Consultation
           </button>
-          <button class="button button--outline" data-bs-toggle="modal" data-bs-target="#video-modal"
+          <button class="button button--outline" data-bs-toggle="modal" data-bs-target="#yt-video-modal"
             aria-label="Смотреть видео">
             <svg class="button__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
               xmlns="http://www.w3.org/2000/svg">
@@ -174,6 +174,34 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                   fill="#FF368A" />
               </svg>
             </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade modal-xl video-modal" id="yt-video-modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть окно видео">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_408_7077)">
+                <path
+                  d="M11.1049 10.001L19.7712 1.3347C20.0763 1.02958 20.0763 0.534892 19.7712 0.229814C19.4661 -0.0752636 18.9714 -0.0753026 18.6663 0.229814L9.99999 8.89613L1.33372 0.229814C1.0286 -0.0753026 0.533915 -0.0753026 0.228837 0.229814C-0.0762401 0.534931 -0.0762791 1.02962 0.228837 1.3347L8.89511 10.001L0.228837 18.6673C-0.0762791 18.9724 -0.0762791 19.4671 0.228837 19.7722C0.381376 19.9247 0.581337 20.001 0.781297 20.001C0.981258 20.001 1.18118 19.9247 1.33376 19.7722L9.99999 11.1059L18.6663 19.7722C18.8188 19.9247 19.0188 20.001 19.2187 20.001C19.4187 20.001 19.6186 19.9247 19.7712 19.7722C20.0763 19.4671 20.0763 18.9724 19.7712 18.6673L11.1049 10.001Z"
+                  fill="white" />
+              </g>
+              <defs>
+                <clipPath id="clip0_408_7077">
+                  <rect width="20" height="20" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="modal__video">
+            <div id="modal-yt-player"></div>
           </div>
         </div>
       </div>
