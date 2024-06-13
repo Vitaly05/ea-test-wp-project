@@ -18,6 +18,41 @@ const init = function() {
   })
 
 
+  const modalPlayer = $('#modal__video-1').get(0)
+  const modalPlayerButton = $('[data-player-id="modal__video-1"]')
+  
+  $('#video-modal').on('shown.bs.modal', function() {
+    startPlayer(modalPlayer, modalPlayerButton)
+  })
+
+  $('#video-modal').on('hide.bs.modal', function() {
+    stopPlayer(modalPlayer, modalPlayerButton)
+  })
+
+  $('#video-modal .video__player-button').each(function() {
+    $(this).on('click', function() {
+      const playerId = $(this).data('playerId')
+      const player = $(`#${playerId}`).get(0)
+      if (!player) return
+
+      if (player.paused) {
+        startPlayer(player, $(this))
+      } else {
+        stopPlayer(player, $(this))
+      }
+    })
+  })
+
+  function startPlayer(player, playerButton) {
+    playerButton.addClass('pause-button')
+    player.play()
+  }
+
+  function stopPlayer(player, playerButton) {
+    playerButton.removeClass('pause-button')
+    player.pause()
+  }
+
 
   // OFFERS
 
@@ -82,10 +117,12 @@ const init = function() {
 
   // TESTIMONIALS
 
-  $('.video__player-button').each(function() {
+  $('#testimonials-section .video__player-button').each(function() {
     $(this).on('click', function() {
       const playerId = $(this).data('playerId')
       const player = $(`#${playerId}`).get(0)
+      if (!player) return
+
       if (player.paused) {
         stopAllVideos()
         $(this).addClass('pause-button')

@@ -813,3 +813,56 @@ button {
     font-size: 16px;
   }
 }
+
+.video {
+  @include hover {
+    .pause-icon {
+      color: $color-primary !important;
+    }
+  }
+
+  .video__player-button {
+    --size: 50px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: var(--size);
+    height: var(--size);
+
+    svg {
+      width: var(--size);
+      height: var(--size);
+    }
+
+    @include breakpoint-down(mobile) {
+      --size: 40px;
+    }
+
+    .pause-icon {
+      display: none;
+    }
+
+    &.pause-button {
+      .play-icon {
+        display: none;
+      }
+
+      .pause-icon {
+        display: block;
+
+        color: transparent;
+
+        transition: color $transition-default;
+      }
+
+      @include hover {
+        .pause-icon {
+          color: $color-primary-hover !important;
+        }
+      }
+    }
+  }
+}

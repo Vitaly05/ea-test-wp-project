@@ -1504,51 +1504,27 @@
   @include breakpoint-down(mobile) {
     width: 100%;
   }
+}
 
-  @include hover {
-    .pause-icon {
-      color: $color-primary !important;
+.video-modal {
+  overflow: hidden;
+
+  .modal-content {
+    background-color: transparent;
+  }
+
+  @include breakpoint-down(mobile-small) {
+    .btn-close {
+      --size: 26px;
     }
   }
 }
 
-.video__player-button {
-  --size: 50px;
+.modal__video {
+  position: relative;
 
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  width: var(--size);
-  height: var(--size);
-
-  svg {
-    width: var(--size);
-    height: var(--size);
-  }
-
-  .pause-icon {
-    display: none;
-  }
-
-  &.pause-button {
-    .play-icon {
-      display: none;
-    }
-
-    .pause-icon {
-      display: block;
-
-      color: transparent;
-
-      transition: color $transition-default;
-    }
-
-    @include hover {
-      .pause-icon {
-        color: $color-primary-hover !important;
-      }
-    }
-  }
+  width: 100%;
+  max-height: 90dvh;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
 }

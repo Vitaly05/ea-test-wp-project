@@ -113,20 +113,20 @@
   border-top-left-radius: var(--bs-modal-inner-border-radius);
   border-top-right-radius: var(--bs-modal-inner-border-radius);
 }
-.modal-header .btn-close {
+.btn-close {
   // padding: calc(var(--bs-modal-header-padding-y) * 0.5) calc(var(--bs-modal-header-padding-x) * 0.5);
   // margin: calc(-0.5 * var(--bs-modal-header-padding-y)) calc(-0.5 * var(--bs-modal-header-padding-x))
   //   calc(-0.5 * var(--bs-modal-header-padding-y)) auto;
 
-  $size: 56px;
+  --size: 56px;
 
   position: absolute;
   top: 4px;
   right: 4px;
   z-index: calc(var(--bs-modal-zindex) + 10);
 
-  width: $size;
-  height: $size;
+  width: var(--size);
+  height: var(--size);
 
   display: flex;
   justify-content: center;
@@ -143,10 +143,10 @@
   }
 
   svg {
-    $size: 24px;
+    --size: 24px;
 
-    width: $size;
-    height: $size;
+    width: var(--size);
+    height: var(--size);
   }
 }
 
@@ -208,23 +208,47 @@
   .modal-sm {
     --bs-modal-width: 300px;
   }
-  .modal-lg,
-  .modal-xl {
+  .modal-lg {
     --bs-modal-width: 688px;
   }
 }
 
 @media (min-width: 992px) {
-  .modal-lg,
-  .modal-xl {
+  .modal-lg {
     --bs-modal-width: 800px;
   }
 }
-@media (min-width: 1200px) {
+@include breakpoint-up(mobile-small) {
   .modal-xl {
-    --bs-modal-width: 1140px;
+    --bs-modal-width: 550px;
   }
 }
+@include breakpoint-up(mobile) {
+  .modal-xl {
+    --bs-modal-width: 750px;
+  }
+}
+@include breakpoint-up(tablet) {
+  .modal-xl {
+    --bs-modal-width: 1000px;
+  }
+}
+@include breakpoint-up(small-desktop) {
+  .modal-xl {
+    --bs-modal-width: 1200px;
+  }
+}
+@include breakpoint-up(desktop) {
+  .modal-xl {
+    --bs-modal-width: 1360px;
+  }
+}
+@include breakpoint-up(large-desktop) {
+  .modal-xl {
+    --bs-modal-width: 1600px;
+  }
+}
+
 .modal-fullscreen {
   width: 100vw;
   max-width: none;

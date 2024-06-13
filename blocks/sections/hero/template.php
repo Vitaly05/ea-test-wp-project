@@ -50,7 +50,8 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
             aria-label="Перейти к консультации">
             Book Consultation
           </button>
-          <button class="button button--outline" aria-label="Смотреть видео">
+          <button class="button button--outline" data-bs-toggle="modal" data-bs-target="#video-modal"
+            aria-label="Смотреть видео">
             <svg class="button__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_408_4555)">
@@ -71,8 +72,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
     </div>
   </div>
 
-  <div class="modal fade modal-lg consultation-modal" id="consultation-modal" tabindex="-1"
-    aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade modal-lg consultation-modal" id="consultation-modal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
       <div class="modal-content">
         <div class="modal-header">
@@ -133,22 +133,68 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
       </div>
     </div>
   </div>
+
+  <div class="modal fade modal-xl video-modal" id="video-modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть окно видео">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_408_7077)">
+                <path
+                  d="M11.1049 10.001L19.7712 1.3347C20.0763 1.02958 20.0763 0.534892 19.7712 0.229814C19.4661 -0.0752636 18.9714 -0.0753026 18.6663 0.229814L9.99999 8.89613L1.33372 0.229814C1.0286 -0.0753026 0.533915 -0.0753026 0.228837 0.229814C-0.0762401 0.534931 -0.0762791 1.02962 0.228837 1.3347L8.89511 10.001L0.228837 18.6673C-0.0762791 18.9724 -0.0762791 19.4671 0.228837 19.7722C0.381376 19.9247 0.581337 20.001 0.781297 20.001C0.981258 20.001 1.18118 19.9247 1.33376 19.7722L9.99999 11.1059L18.6663 19.7722C18.8188 19.9247 19.0188 20.001 19.2187 20.001C19.4187 20.001 19.6186 19.9247 19.7712 19.7722C20.0763 19.4671 20.0763 18.9724 19.7712 18.6673L11.1049 10.001Z"
+                  fill="white" />
+              </g>
+              <defs>
+                <clipPath id="clip0_408_7077">
+                  <rect width="20" height="20" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="modal__video video">
+            <video id="modal__video-1"
+              poster="/wp-content/themes/testproject/resources/videos/testimonials/poster-2.jpg">
+              <source src="/wp-content/themes/testproject/resources/videos/testimonials/t-2.mp4" type="video/mp4" />
+            </video>
+            <button class="button-icon button-icon--transparent video__player-button" data-player-id="modal__video-1">
+              <svg class="play-icon" width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9.96582 6.01218V43.9933C9.96582 44.8968 10.9247 45.4778 11.7256 45.0596L47.9645 26.1338C48.8245 25.6847 48.8262 24.4544 47.9674 24.0028L11.7286 4.94748C10.9276 4.52628 9.96582 5.10717 9.96582 6.01218Z"
+                  fill="#FF368A" />
+              </svg>
+              <svg class="pause-icon" width="30" height="40" viewBox="0 0 30 40" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0 2V38C0 39.1046 0.89543 40 2 40H8C9.10457 40 10 39.1046 10 38V2C10 0.89543 9.10457 0 8 0H2C0.895431 0 0 0.895431 0 2Z"
+                  fill="#FF368A" />
+                <path
+                  d="M20 2V38C20 39.1046 20.8954 40 22 40H28C29.1046 40 30 39.1046 30 38V2C30 0.89543 29.1046 0 28 0H22C20.8954 0 20 0.895431 20 2Z"
+                  fill="#FF368A" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section>
-  <div class="testimonials">
+  <div class="testimonials" id="testimonials-section">
     <div class="testimonials-bg"></div>
     <div class="container">
       <div class="section-title testimonials__section-title">Testimonials</div>
       <div class="testimonials__videos-panel">
-        <div class="testimonials__video">
+        <div class="testimonials__video video">
           <video id="testimonials__video-1"
             poster="/wp-content/themes/testproject/resources/videos/testimonials/poster-1.jpg">
             <source src="/wp-content/themes/testproject/resources/videos/testimonials/t-1.mp4" type="video/mp4" />
           </video>
           <button class="button-icon button-icon--transparent video__player-button"
             data-player-id="testimonials__video-1">
-            <svg class="play-icon" xmlns="http://www.w3.org/2000/svg">
+            <svg class="play-icon" width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M9.96582 6.01218V43.9933C9.96582 44.8968 10.9247 45.4778 11.7256 45.0596L47.9645 26.1338C48.8245 25.6847 48.8262 24.4544 47.9674 24.0028L11.7286 4.94748C10.9276 4.52628 9.96582 5.10717 9.96582 6.01218Z"
                 fill="#FF368A" />
@@ -163,14 +209,14 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
             </svg>
           </button>
         </div>
-        <div class="testimonials__video">
+        <div class="testimonials__video video">
           <video id="testimonials__video-2"
             poster="/wp-content/themes/testproject/resources/videos/testimonials/poster-2.jpg">
             <source src="/wp-content/themes/testproject/resources/videos/testimonials/t-2.mp4" type="video/mp4" />
           </video>
           <button class="button-icon button-icon--transparent video__player-button"
             data-player-id="testimonials__video-2">
-            <svg class="play-icon" xmlns="http://www.w3.org/2000/svg">
+            <svg class="play-icon" width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M9.96582 6.01218V43.9933C9.96582 44.8968 10.9247 45.4778 11.7256 45.0596L47.9645 26.1338C48.8245 25.6847 48.8262 24.4544 47.9674 24.0028L11.7286 4.94748C10.9276 4.52628 9.96582 5.10717 9.96582 6.01218Z"
                 fill="#FF368A" />
@@ -185,14 +231,14 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
             </svg>
           </button>
         </div>
-        <div class="testimonials__video">
+        <div class="testimonials__video video">
           <video id="testimonials__video-3"
             poster="/wp-content/themes/testproject/resources/videos/testimonials/poster-3.jpg">
             <source src="/wp-content/themes/testproject/resources/videos/testimonials/t-3.mp4" type="video/mp4" />
           </video>
           <button class="button-icon button-icon--transparent video__player-button"
             data-player-id="testimonials__video-3">
-            <svg class="play-icon" xmlns="http://www.w3.org/2000/svg">
+            <svg class="play-icon" width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M9.96582 6.01218V43.9933C9.96582 44.8968 10.9247 45.4778 11.7256 45.0596L47.9645 26.1338C48.8245 25.6847 48.8262 24.4544 47.9674 24.0028L11.7286 4.94748C10.9276 4.52628 9.96582 5.10717 9.96582 6.01218Z"
                 fill="#FF368A" />
