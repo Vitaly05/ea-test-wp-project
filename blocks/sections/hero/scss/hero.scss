@@ -1435,3 +1435,120 @@
 .ba-slider .handle.ba-draggable:after {
   background-color: $color-primary;
 }
+
+.testimonials {
+  position: relative;
+
+  padding-top: 150px;
+
+  background-color: $background-main;
+
+  .container {
+    position: relative;
+    z-index: inherit;
+  }
+}
+
+.testimonials-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: calc(100% - 110px);
+
+  background-color: $white;
+
+  @include breakpoint-down(large-desktop) {
+    display: none;
+  }
+}
+
+.testimonials__section-title {
+  text-align: center;
+}
+
+.testimonials__videos-panel {
+  margin-top: 30px;
+  padding: 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 10px;
+
+  background: $color-primary;
+  border-radius: 2px;
+
+  @include breakpoint-down(desktop) {
+    padding: 15px;
+  }
+
+  @include breakpoint-down(small-desktop) {
+    padding: 10px;
+  }
+
+  @include breakpoint-down(mobile) {
+    flex-direction: column;
+  }
+}
+
+.testimonials__video {
+  position: relative;
+
+  width: 32%;
+  aspect-ratio: 16 / 9;
+
+  object-fit: contain;
+
+  @include breakpoint-down(mobile) {
+    width: 100%;
+  }
+
+  @include hover {
+    .pause-icon {
+      color: $color-primary !important;
+    }
+  }
+}
+
+.video__player-button {
+  --size: 50px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: var(--size);
+  height: var(--size);
+
+  svg {
+    width: var(--size);
+    height: var(--size);
+  }
+
+  .pause-icon {
+    display: none;
+  }
+
+  &.pause-button {
+    .play-icon {
+      display: none;
+    }
+
+    .pause-icon {
+      display: block;
+
+      color: transparent;
+
+      transition: color $transition-default;
+    }
+
+    @include hover {
+      .pause-icon {
+        color: $color-primary-hover !important;
+      }
+    }
+  }
+}

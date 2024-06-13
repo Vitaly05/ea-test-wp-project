@@ -54,6 +54,7 @@ const init = function() {
     centeredSlides: true,
     loop: true,
     allowTouchMove: false,
+
     coverflowEffect: {
       rotate: 0,
       stretch: 10,
@@ -62,10 +63,6 @@ const init = function() {
       scale: 0.9,
       slideShadows: false,
     },
-
-    
-    
-
 
     navigation: {
       nextEl: '#results__slider-button-next',
@@ -81,6 +78,31 @@ const init = function() {
   $('.result-slider').each(function() {
     $(this).beforeAfter()
   })
+
+
+  // TESTIMONIALS
+
+  $('.video__player-button').each(function() {
+    $(this).on('click', function() {
+      const playerId = $(this).data('playerId')
+      const player = $(`#${playerId}`).get(0)
+      if (player.paused) {
+        stopAllVideos()
+        $(this).addClass('pause-button')
+        player.play()
+      } else {
+        player.pause()
+        $(this).removeClass('pause-button')
+      }
+    })
+  })
+
+  function stopAllVideos() {
+    $('.testimonials__video').each(function() {
+      $(this).find('video').get(0).pause()
+      $(this).find('.video__player-button').removeClass('pause-button')
+    })
+  }
 
 
 

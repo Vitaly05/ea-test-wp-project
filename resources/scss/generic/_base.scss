@@ -509,7 +509,7 @@ svg.logo {
   font-size: 16px;
   line-height: 100%;
 
-  &:hover {
+  @include hover() {
     background: $color-primary-hover;
   }
 
@@ -568,7 +568,7 @@ svg.logo {
     }
   }
 
-  &:hover {
+  @include hover {
     .button-icon__icon {
       background-color: $color-primary-hover;
     }
@@ -579,11 +579,19 @@ svg.logo {
   }
 }
 
+.button-icon--transparent {
+  color: $color-primary;
+
+  @include hover {
+    color: $color-primary-hover;
+  }
+}
+
 .button--outline {
   background-color: transparent;
   box-shadow: inset 0px 0px 0px 3px $color-primary;
 
-  &:hover {
+  @include hover {
     background-color: $color-primary-hover;
     box-shadow: inset 0px 0px 0px 3px $color-primary-hover;
   }
@@ -595,7 +603,7 @@ svg.logo {
     box-shadow: inset 0px 0px 0px 3px $color-primary;
   }
 
-  &:hover {
+  @include hover {
     .button-icon__icon {
       background-color: $color-primary-hover;
       box-shadow: inset 0px 0px 0px 3px $color-primary-hover;
@@ -617,7 +625,7 @@ svg.logo {
   line-height: 100%;
   text-decoration-line: underline;
 
-  &:hover {
+  @include hover {
     background-color: transparent;
     color: $color-primary-hover;
   }
@@ -630,7 +638,7 @@ svg.logo {
 .button--color-primary {
   color: $color-primary;
 
-  &:hover {
+  @include hover {
     color: $white;
   }
 }
@@ -647,7 +655,7 @@ svg.logo {
 
   transition: background-size $transition-default;
 
-  &:hover {
+  @include hover {
     background-size: 100% 2px;
   }
 }
