@@ -52,11 +52,11 @@ const init = function() {
     effect: 'coverflow',
     slidesPerView: 3,
     centeredSlides: true,
-    loop: false,
+    loop: true,
     allowTouchMove: false,
     coverflowEffect: {
       rotate: 0,
-      stretch: 100,
+      stretch: 10,
       depth: 100,
       modifier: 1.1,
       scale: 0.9,

@@ -15,7 +15,7 @@
       var dragWidth = dragElement.outerWidth(),
           posX = dragElement.offset().left + dragWidth - startX,
           containerOffset = container.offset().left,
-          containerWidth = container.outerWidth();
+          containerWidth = container[0].getBoundingClientRect().width;
    
       // Set limits
       minLeft = containerOffset + 10;

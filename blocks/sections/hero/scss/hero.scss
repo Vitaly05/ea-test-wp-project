@@ -1254,6 +1254,26 @@
 }
 
 .results__slider-block {
+  .swiper-slide {
+    scale: 1.5;
+
+    @include breakpoint-between(tablet, small-desktop) {
+      scale: 1.1;
+    }
+
+    @include breakpoint-down(mobile-small) {
+      scale: 1.1;
+    }
+  }
+
+  .swiper-slide:not(.swiper-slide-active) {
+    .ba-slider .handle,
+    .ba-slider .handle:after,
+    .before-after__text {
+      display: none;
+    }
+  }
+
   .slider-block__container {
     --padding: 60px;
 
@@ -1268,6 +1288,28 @@
 
     background: $color-primary;
     border-radius: 2px;
+
+    .before-after__text {
+      position: absolute;
+      bottom: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      margin-top: var(--text-mt);
+      margin-bottom: var(--text-mb);
+
+      display: flex;
+      justify-content: space-between;
+      width: 40%;
+
+      color: $white;
+
+      font-family: $font-secondary;
+      font-size: var(--text-font-size);
+      line-height: 140%;
+      text-align: center;
+      letter-spacing: -0.05em;
+    }
 
     @include breakpoint-down(large-desktop) {
       --padding: 30px;
@@ -1307,7 +1349,7 @@
 
   @include breakpoint-down(large-desktop) {
     --height: 510px;
-    --width: 310px;
+    --width: 390px;
   }
 
   @include breakpoint-down(mobile) {
@@ -1318,23 +1360,6 @@
   @include breakpoint-down(mobile-small) {
     --height: 310px;
     --width: 210px;
-  }
-
-  .before-after__text {
-    margin-top: var(--text-mt);
-    margin-bottom: var(--text-mb);
-
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-
-    color: $white;
-
-    font-family: $font-secondary;
-    font-size: var(--text-font-size);
-    line-height: 140%;
-    text-align: center;
-    letter-spacing: -0.05em;
   }
 
   .ba-slider {
@@ -1364,6 +1389,13 @@
     width: 50%;
 
     overflow: hidden;
+
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      object-position: left;
+    }
   }
 }
 
@@ -1402,12 +1434,4 @@
 
 .ba-slider .handle.ba-draggable:after {
   background-color: $color-primary;
-}
-
-.swiper-slide:not(.swiper-slide-active) {
-  .ba-slider .handle,
-  .ba-slider .handle:after,
-  .before-after__text {
-    display: none;
-  }
 }
