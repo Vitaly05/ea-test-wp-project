@@ -3,7 +3,7 @@
  */
 import { initScript } from '../../../../resources/js/utils/init-script'
 import horizontalScroll, { verticalScroll } from '../../../../resources/js/modules/horizontal-scroll';
-import Swiper, { Navigation, Pagination } from 'swiper';
+import Swiper, { Navigation, Pagination, EffectCoverflow } from 'swiper';
 
 
 const init = function() {
@@ -47,10 +47,25 @@ const init = function() {
   // RESULTS
 
   const resultsSwiper = new Swiper('#results__swiper', {
-    modules: [Navigation, Pagination],
-
+    modules: [Navigation, Pagination, EffectCoverflow],
+    
+    effect: 'coverflow',
+    slidesPerView: 3,
+    centeredSlides: true,
     loop: true,
     allowTouchMove: false,
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 10,
+      depth: 100,
+      modifier: 1.1,
+      scale: 0.9,
+      slideShadows: false,
+    },
+
+    
+    
+
 
     navigation: {
       nextEl: '#results__slider-button-next',
@@ -60,7 +75,7 @@ const init = function() {
     pagination: {
       el: '#results__slider-pagination',
       clickable: true
-    }
+    },
   });
 
   $('.result-slider').each(function() {
