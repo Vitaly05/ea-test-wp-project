@@ -20,21 +20,18 @@ const init = function() {
 
 
   const modalYtPlayer = YouTubePlayer('modal-yt-player')
-  // modalYtPlayer.loadVideoById('TyjgGSTA0QQ')
+  const defaultVideoId = 'TyjgGSTA0QQ'
+  const videoId = $('#yt-video-modal').data('video-id')
+
+  if (videoId) {
+    modalYtPlayer.loadVideoById(videoId)
+  } else {
+    modalYtPlayer.loadVideoById(defaultVideoId)
+  }
 
   $('#yt-video-modal').on('shown.bs.modal', function() {
     stopAllVideos()
-
-    const videoId = $(this).data('video-id')
-    if (videoId) {
-      modalYtPlayer.loadVideoById(videoId).then(() => {
-        modalYtPlayer.playVideo()
-      })
-    } else {
-      modalYtPlayer.loadVideoById('TyjgGSTA0QQ').then(() => {
-        modalYtPlayer.playVideo()
-      })
-    }
+    modalYtPlayer.playVideo()
   })
 
   $('#yt-video-modal').on('hide.bs.modal', function() {
