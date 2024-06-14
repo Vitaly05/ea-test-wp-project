@@ -180,7 +180,8 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
     </div>
   </div>
 
-  <div class="modal fade modal-xl video-modal" id="yt-video-modal" tabindex="-1" aria-hidden="true">
+  <div class="modal fade modal-xl video-modal" id="yt-video-modal" data-video-id="TyjgGSTA0QQ" tabindex="-1"
+    aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
