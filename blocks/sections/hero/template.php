@@ -215,90 +215,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
     <div class="container">
       <div class="gallery__title">our gallery</div>
       <div class="gallery__text">A fitness training center for<br> women, by women</div>
-      <div class="gallery__photos">
-        <a class="photo-card" aria-label="Открыть фотографию на весь экран">
-          <span class="background-img">
-            <img class="photo-card__img" src="/wp-content/themes/testproject/resources/images/gallery/1.jpg"
-              alt="Фото из галереи">
-            <span class="background-filter"></span>
-          </span>
-          <span class="photo-card__title">Beginners Welcome</span>
-          <span class="photo-card__text">2 Photos</span>
-        </a>
-        <a class="photo-card" aria-label="Открыть фотографию на весь экран">
-          <div class="background-img">
-            <img class="photo-card__img" src="/wp-content/themes/testproject/resources/images/gallery/2.jpg"
-              alt="Фото из галереи">
-            <div class="background-filter"></div>
-          </div>
-          <div class="photo-card__title">Virtual/Hybrid Training</div>
-          <div class="photo-card__text">2 Photos</div>
-        </a>
-        <a class="photo-card" aria-label="Открыть фотографию на весь экран">
-          <span class="background-img">
-            <img class="photo-card__img" src="/wp-content/themes/testproject/resources/images/gallery/3.jpg"
-              alt="Фото из галереи">
-            <span class="background-filter"></span>
-          </span>
-          <span class="photo-card__title">Personal Training</span>
-          <span class="photo-card__text">5 Photos</span>
-        </a>
-        <a class="photo-card" aria-label="Открыть фотографию на весь экран">
-          <span class="background-img">
-            <img class="photo-card__img" src="/wp-content/themes/testproject/resources/images/gallery/4.jpg"
-              alt="Фото из галереи">
-            <span class="background-filter"></span>
-          </span>
-          <span class="photo-card__title">On-Demand Programs</span>
-          <span class="photo-card__text">2 Photos</span>
-        </a>
-        <a class="photo-card" aria-label="Открыть фотографию на весь экран">
-          <span class="background-img">
-            <img class="photo-card__img" src="/wp-content/themes/testproject/resources/images/gallery/5.jpg"
-              alt="Фото из галереи">
-            <span class="background-filter"></span>
-          </span>
-          <span class="photo-card__title">The mind fitness</span>
-          <span class="photo-card__text">2 Photos</span>
-        </a>
-        <a class="photo-card" aria-label="Открыть фотографию на весь экран">
-          <span class="background-img">
-            <img class="photo-card__img" src="/wp-content/themes/testproject/resources/images/gallery/6.jpg"
-              alt="Фото из галереи">
-            <span class="background-filter"></span>
-          </span>
-          <span class="photo-card__title">Semi-Private Training for Women</span>
-          <span class="photo-card__text">2 Photos</span>
-        </a>
-        <a class="photo-card" aria-label="Открыть фотографию на весь экран">
-          <span class="background-img">
-            <img class="photo-card__img" src="/wp-content/themes/testproject/resources/images/gallery/7.jpg"
-              alt="Фото из галереи">
-            <span class="background-filter"></span>
-          </span>
-          <span class="photo-card__title">Nutrition Program</span>
-          <span class="photo-card__text">2 Photos</span>
-        </a>
-        <a class="photo-card" aria-label="Открыть фотографию на весь экран">
-          <span class="background-img">
-            <img class="photo-card__img" src="/wp-content/themes/testproject/resources/images/gallery/8.jpg"
-              alt="Фото из галереи">
-            <span class="background-filter"></span>
-          </span>
-          <span class="photo-card__title">Co-ed Training</span>
-          <span class="photo-card__text">2 Photos</span>
-        </a>
-        <a class="photo-card" aria-label="Открыть фотографию на весь экран">
-          <span class="background-img">
-            <img class="photo-card__img" src="/wp-content/themes/testproject/resources/images/gallery/9.jpg"
-              alt="Фото из галереи">
-            <span class="background-filter"></span>
-          </span>
-          <span class="photo-card__title">Functional Fitness</span>
-          <span class="photo-card__text">2 Photos</span>
-        </a>
-
-        <!-- MORE PHOTO-CARDS -->
+      <div class="gallery__photos" id="js-gallery-photos">
         <a class="photo-card" aria-label="Открыть фотографию на весь экран">
           <span class="background-img">
             <img class="photo-card__img" src="/wp-content/themes/testproject/resources/images/gallery/1.jpg"
@@ -382,7 +299,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
         </a>
       </div>
       <div class="gallery__actions">
-        <button class="button" aria-label="Загрузить больше фотографий">
+        <button class="button" id="js-load-more-button" aria-label="Загрузить больше фотографий">
           Load More
         </button>
       </div>

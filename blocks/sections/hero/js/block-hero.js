@@ -229,6 +229,34 @@ const init = function() {
     slider.close()
   })
 
+  $('#js-load-more-button').on('click', appendImages)
+
+  function appendImages() {
+    let i = 0;
+    const container = $('#js-gallery-photos')
+
+    let appendInterval
+    appendInterval = setInterval(() => {
+      if (i === images.length) {
+        clearInterval(appendInterval)
+      } else {
+        container.append(`
+        <a class="photo-card" aria-label="Открыть фотографию на весь экран">
+          <span class="background-img">
+            <img class="photo-card__img" src="${images[i++]}"
+              alt="Фото из галереи">
+            <span class="background-filter"></span>
+          </span>
+          <span class="photo-card__title">Personal Training</span>
+          <span class="photo-card__text">5 Photos</span>
+        </a>
+        `)
+      }
+    }, 1000)
+  }
+
+
+
   let transitionTimeout
 
   function onOpenSlider(index) {
