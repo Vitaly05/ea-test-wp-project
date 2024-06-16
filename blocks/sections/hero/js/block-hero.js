@@ -2,13 +2,13 @@
  * Internal Dependencies
  */
 import { initScript } from '../../../../resources/js/utils/init-script'
-import horizontalScroll, { verticalScroll } from '../../../../resources/js/modules/horizontal-scroll';
-import Swiper, { Navigation, Pagination, EffectCoverflow } from 'swiper';
-import YouTubePlayer from 'youtube-player';
+import horizontalScroll, { verticalScroll } from '../../../../resources/js/modules/horizontal-scroll'
+import Swiper, { Navigation, Pagination, EffectCoverflow } from 'swiper'
+import YouTubePlayer from 'youtube-player'
 
 
 const init = function() {
-	const $section = $( this );
+	const $section = $( this )
 
   verticalScroll($('#consultation-modal'))
 
@@ -97,10 +97,23 @@ const init = function() {
       el: '#reviews__slider-pagination',
       clickable: true
     }
-  });
+  })
 
 
   // RESULTS
+
+  const resultsTextSwiper = new Swiper('#results-text__swiper', {
+    // modules: [Navigation],
+    
+    centeredSlides: true,
+    loop: true,
+    allowTouchMove: false,
+
+    // navigation: {
+    //   nextEl: '#results__slider-button-next',
+    //   prevEl: '#results__slider-button-prev',
+    // }
+  })
 
   const resultsSwiper = new Swiper('#results__swiper', {
     modules: [Navigation, Pagination, EffectCoverflow],
@@ -129,7 +142,15 @@ const init = function() {
       el: '#results__slider-pagination',
       clickable: true
     },
-  });
+  })
+
+  resultsSwiper.on('slideNextTransitionStart', () => {
+    resultsTextSwiper.slideNext()
+  })
+
+  resultsSwiper.on('slidePrevTransitionStart', () => {
+    resultsTextSwiper.slidePrev()
+  })
 
   $('.result-slider').each(function() {
     $(this).beforeAfter()
@@ -232,7 +253,7 @@ const init = function() {
   $('#js-load-more-button').on('click', appendImages)
 
   function appendImages() {
-    let i = 0;
+    let i = 0
     const container = $('#js-gallery-photos')
 
     let appendInterval

@@ -726,8 +726,24 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
     <div class="container">
       <div class="results__text-block">
         <div class="section-title results__title">Real Women, Real Results</div>
-        <div class="section-text results__text">
-          I believe when you truly commit to making a change, you will see results
+        <div class="swiper" id="results-text__swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="section-text results__text">
+                I believe when you truly commit to making a change, you will see results
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="section-text results__text">
+                I believe when you truly commit to making a change, you will see results 2
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="section-text results__text">
+                I believe when you truly commit to making a change, you will see results 3
+              </div>
+            </div>
+          </div>
         </div>
         <div class="swiper__controls result__swiper-controls">
           <button class="slider__button" id="results__slider-button-prev" aria-label="Показать предыдущую отзыв">

@@ -39,6 +39,9 @@
         // Translate the handle's left value to masked divs width.
         widthValue = (leftValue + dragWidth/2 - containerOffset)*100/containerWidth+'%';
         
+        if (!$(this).parents().hasClass('swiper-slide-active')) {
+          return
+        }
         // Set the new values for the slider and the handle. 
         $('.ba-draggable').css('left', widthValue);
         $('.ba-resizable').css('width', widthValue);

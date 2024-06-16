@@ -1333,8 +1333,12 @@
   }
 }
 
+#results-text__swiper {
+  margin-left: 0;
+}
+
 .results__title,
-.results__text {
+#results-text__swiper {
   max-width: 540px;
 
   @include breakpoint-down(large-desktop) {
@@ -1383,10 +1387,14 @@
   }
 
   .swiper-slide:not(.swiper-slide-active) {
-    .ba-slider .handle,
+    // .ba-slider .handle,
     .ba-slider .handle:after,
     .before-after__text {
       display: none;
+    }
+
+    .ba-slider .handle {
+      cursor: default;
     }
   }
 
