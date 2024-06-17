@@ -15,6 +15,14 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
 	hm_get_template_part_with_params( 'fragments/block-preview-image', ['block' => $block] );
 	return;
 }
+
+/**
+ * Block Variables
+ */
+
+$phone_group = get_field('footer_phone');
+$address = get_field('footer_address');
+
 ?>
 
 <footer class="footer">
@@ -53,7 +61,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
             </div>
             <div class="contact__text">
               <a class="underline-hover" href="javascript:void(0)" aria-label="Открыть наше местоположение на картах'">
-                4535 Forsyth Rd Suite 2<br> Macon, GA 31210
+                <php echo $address; ?>
               </a>
             </div>
           </div>
@@ -72,8 +80,8 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
                 </defs>
               </svg>
             </div>
-            <a class="contact__text underline-hover" href="tel:4782543220" aria-label="позвонить нам">
-              (478) 254-3220
+            <a class="contact__text underline-hover" href="tel:<?php echo $phone_group['href_number']; ?>" aria-label="позвонить нам">
+              <?php echo $phone_group['displayed_string']; ?>
             </a>
           </div>
           <div class="top-footer__social">

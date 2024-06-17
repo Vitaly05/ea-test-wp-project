@@ -15,6 +15,14 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
 	hm_get_template_part_with_params( 'fragments/block-preview-image', ['block' => $block] );
 	return;
 }
+
+/**
+ * Block Variables
+ */
+
+$phone_group = get_field('header_phone');
+$address = get_field('header_address');
+
 ?>
 
 <header class="header">
@@ -62,7 +70,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
             Menu
           </div>
         </button>
-        <a class="button-icon button-icon--outline phone-button" href="tel:4782543220">
+        <a class="button-icon button-icon--outline phone-button" href="tel:<?php echo $phone_group['href_number']; ?>">
           <div class="button-icon__icon">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_408_7577)">
@@ -78,7 +86,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
             </svg>
           </div>
           <div class="button-icon__text underline-hover">
-            (478) 254-3220
+            <?php echo $phone_group['displayed_string']; ?>
           </div>
         </a>
       </div>
@@ -145,7 +153,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
           Contact Us
         </a>
         <a class="header-menu__link" href="javascript:void(0)" aria-label="Перейти на страницу 'до и после'">
-          Befor & Afters
+          Before & Afters
         </a>
         <a class="header-menu__link" href="javascript:void(0)" aria-label="Перейти к ресурсам">
           Resources
@@ -168,7 +176,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
           </div>
           <div class="contact__text">
             <a class="underline-hover" href="javascript:void(0)" aria-label="Открыть наше местоположение в картах">
-              4535 Forsyth Rd Suite 2<br /> Macon, GA 31210
+              <?php echo $address; ?>
             </a>
           </div>
         </div>
@@ -187,8 +195,8 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
               </defs>
             </svg>
           </div>
-          <a class="contact__text underline-hover" href="tel:4782543220" aria-label="Позвонить нам">
-            (478) 254-3220
+          <a class="contact__text underline-hover" href="tel:<?php echo $phone_group['href_number']; ?>" aria-label="Позвонить нам">
+            <?php echo $phone_group['displayed_string']; ?>
           </a>
         </div>
         <div class="header-menu__social">

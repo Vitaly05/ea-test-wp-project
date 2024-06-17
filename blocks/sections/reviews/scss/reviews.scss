@@ -1,0 +1,237 @@
+/* ------------------------------------------------------------ *\
+	Generic
+\* ------------------------------------------------------------ */
+
+@import '../../../../resources/scss/generic/variables';
+@import '../../../../resources/scss/generic/functions';
+@import '../../../../resources/scss/generic/mixins';
+
+/* ------------------------------------------------------------ *\
+	Blocks: Section Reviews
+\* ------------------------------------------------------------ */
+
+// REVIEWS
+
+.reviews-section {
+  position: relative;
+
+  overflow: hidden;
+
+  padding-top: 125px;
+  padding-bottom: 50px;
+
+  background-color: $background-main;
+
+  @include breakpoint-down(large-desktop) {
+    padding-top: 100px;
+    padding-bottom: 0;
+  }
+
+  @include breakpoint-down(mobile) {
+    padding-top: 70px;
+  }
+
+  .container {
+    display: flex;
+
+    > div {
+      width: 50%;
+    }
+
+    @include breakpoint-down(large-desktop) {
+      flex-direction: column;
+
+      > div {
+        width: 100%;
+      }
+
+      .half-background {
+        display: none;
+      }
+
+      .reviews-section__reviews {
+        background-color: $white;
+      }
+    }
+  }
+
+  .half-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 50%;
+    height: 100%;
+
+    background-color: $white;
+
+    @include breakpoint-down(large-desktop) {
+      display: none;
+    }
+  }
+}
+
+.reviews-section-bg {
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+
+  max-height: 90%;
+
+  object-fit: contain;
+
+  @include breakpoint-down(large-desktop) {
+    top: 5%;
+    left: auto;
+    right: 0;
+    max-height: 40%;
+  }
+
+  @include breakpoint-down(tablet) {
+    top: 6%;
+    right: -10%;
+  }
+
+  @include breakpoint-down(mobile) {
+    top: 500px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.reviews-section__intro {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  @include breakpoint-down(mobile) {
+    padding-bottom: 358px;
+  }
+
+  .reviews-section__text {
+    margin-top: 30px;
+
+    max-width: 400px;
+
+    @include breakpoint-down(mobile) {
+      margin-top: 20px;
+    }
+  }
+
+  .button--text {
+    margin-top: 10px;
+  }
+
+  .reviews-section__actions {
+    margin-top: 50px;
+
+    display: flex;
+    gap: 10px;
+
+    @include breakpoint-down(large-desktop) {
+      margin-top: 30px;
+
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  @include breakpoint-down(large-desktop) {
+    margin-top: 30px;
+    margin-bottom: 100px;
+  }
+}
+
+.reviews-section__reviews {
+  position: relative;
+
+  padding-left: 158px;
+
+  .reviews-section__title {
+    position: relative;
+    z-index: inherit;
+
+    max-width: 600px;
+  }
+
+  @include breakpoint-down(large-desktop) {
+    padding-top: 100px;
+    padding-bottom: 20px;
+    padding-left: 60px;
+  }
+
+  @include breakpoint-down(mobile) {
+    padding-top: 70px;
+    padding-left: 0;
+
+    max-width: 100%;
+  }
+}
+
+.reviews-bg {
+  display: none;
+
+  @include breakpoint-down(large-desktop) {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: block;
+    width: 100dvw;
+    height: 100%;
+
+    background-color: $white;
+  }
+}
+
+.reviews-swiper {
+  margin-top: 50px;
+
+  .swiper {
+    width: 100%;
+    height: auto;
+  }
+
+  .review__title {
+    color: $text-secondary;
+
+    font-family: $font-main;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 100%;
+
+    @include breakpoint-down(tablet) {
+      font-size: 18px;
+    }
+  }
+
+  .review__stars {
+    margin-top: 10px;
+
+    display: flex;
+    gap: 5px;
+
+    color: $color-primary;
+  }
+
+  .review__text {
+    margin-top: 20px;
+
+    max-width: 495px;
+  }
+
+  .swiper__controls {
+    margin-top: 55px;
+  }
+}
+
+.reviews-swiper__review {
+  padding-left: 16px;
+
+  border-left: 3px solid $color-primary;
+}

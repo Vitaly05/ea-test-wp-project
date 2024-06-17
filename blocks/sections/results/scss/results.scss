@@ -1,0 +1,296 @@
+/* ------------------------------------------------------------ *\
+	Generic
+\* ------------------------------------------------------------ */
+
+@import '../../../../resources/scss/generic/variables';
+@import '../../../../resources/scss/generic/functions';
+@import '../../../../resources/scss/generic/mixins';
+
+/* ------------------------------------------------------------ *\
+	Blocks: Section Results
+\* ------------------------------------------------------------ */
+
+.results-section {
+  --padding-bottom: 0;
+
+  position: relative;
+
+  padding-bottom: var(--padding-bottom);
+
+  height: 1040px;
+
+  background-color: $background-main;
+
+  @include breakpoint-down(small-desktop) {
+    --padding-bottom: 60px;
+
+    padding-top: 70px;
+
+    height: auto;
+  }
+
+  .half-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 50%;
+    height: 100%;
+
+    background-color: $white;
+
+    @include breakpoint-down(small-desktop) {
+      width: 100%;
+      height: calc(100% - 60px - var(--padding-bottom));
+    }
+  }
+
+  .container {
+    position: relative;
+    z-index: inherit;
+
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    > div {
+      width: 50%;
+    }
+
+    @include breakpoint-down(small-desktop) {
+      flex-direction: column;
+      align-items: flex-start;
+
+      > div {
+        width: 100%;
+      }
+    }
+  }
+}
+
+#results-text__swiper {
+  margin-left: 0;
+}
+
+.results__title,
+#results-text__swiper {
+  max-width: 540px;
+
+  @include breakpoint-down(large-desktop) {
+    max-width: 70%;
+  }
+
+  @include breakpoint-down(tablet) {
+    max-width: 100%;
+  }
+}
+
+.results__text {
+  margin-top: 20px;
+
+  font-size: 24px;
+
+  @include breakpoint-down(mobile) {
+    font-size: 20px;
+  }
+}
+
+.result__swiper-controls {
+  margin-top: 100px;
+
+  @include breakpoint-down(small-desktop) {
+    margin-top: 50px;
+  }
+
+  @include breakpoint-down(mobile-small) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.results__slider-block {
+  .swiper-slide {
+    scale: 1.5;
+
+    @include breakpoint-between(tablet, small-desktop) {
+      scale: 1.1;
+    }
+
+    @include breakpoint-down(mobile-small) {
+      scale: 1.1;
+    }
+  }
+
+  .swiper-slide:not(.swiper-slide-active) {
+    // .ba-slider .handle,
+    .ba-slider .handle:after,
+    .before-after__text {
+      display: none;
+    }
+
+    .ba-slider .handle {
+      cursor: default;
+    }
+  }
+
+  .slider-block__container {
+    --padding: 60px;
+
+    padding-top: var(--padding);
+    padding-left: var(--padding);
+    padding-right: var(--padding);
+
+    width: 967px;
+    height: 800px;
+
+    transform: translateX(-95px);
+
+    background: $color-primary;
+    border-radius: 2px;
+
+    .before-after__text {
+      position: absolute;
+      bottom: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      margin-top: var(--text-mt);
+      margin-bottom: var(--text-mb);
+
+      display: flex;
+      justify-content: space-between;
+      width: 40%;
+
+      color: $white;
+
+      font-family: $font-secondary;
+      font-size: var(--text-font-size);
+      line-height: 140%;
+      text-align: center;
+      letter-spacing: -0.05em;
+    }
+
+    @include breakpoint-down(large-desktop) {
+      --padding: 30px;
+
+      width: 688px;
+      height: 594px;
+    }
+
+    @include breakpoint-down(small-desktop) {
+      transform: none;
+
+      margin-top: 30px;
+
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.results__before-after {
+  --height: 680px;
+  --width: 460px;
+  --text-mt: 14px;
+  --text-mb: 25px;
+  --text-font-size: 14px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  width: var(--width);
+  height: calc(var(--height) + var(--text-mt) + var(--text-mb) + var(--text-font-size));
+
+  @include breakpoint-down(large-desktop) {
+    --height: 510px;
+    --width: 390px;
+  }
+
+  @include breakpoint-down(mobile) {
+    --height: 410px;
+    --width: 290px;
+  }
+
+  @include breakpoint-down(mobile-small) {
+    --height: 310px;
+    --width: 210px;
+  }
+
+  .ba-slider {
+    position: relative;
+
+    width: 100%;
+    // height: 100%;
+
+    overflow: hidden;
+    border-radius: 2px;
+  }
+
+  .ba-slider img {
+    display: block;
+    width: 100%;
+    max-width: none !important;
+
+    object-fit: contain;
+  }
+
+  .ba-slider .resize {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+    width: 50%;
+
+    overflow: hidden;
+
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      object-position: left;
+    }
+  }
+}
+
+.ba-slider .handle {
+  cursor: ew-resize;
+
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  transform: translateX(-50%);
+
+  display: block;
+  width: 3px;
+
+  background: $white;
+}
+
+.ba-slider .handle:after {
+  content: '';
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: block;
+  width: 9px;
+  height: 60px;
+
+  background-color: $color-secondary;
+  border: 0.5px solid $white;
+
+  transition: background-color $transition-default;
+}
+
+.ba-slider .handle.ba-draggable:after {
+  background-color: $color-primary;
+}

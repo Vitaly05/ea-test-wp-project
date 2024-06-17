@@ -1,13 +1,13 @@
 {
-  "name": "footer",
-  "title": "Footer",
+  "name": "gallery",
+  "title": "Gallery",
   "description": "",
   "style": [
-    "file:../../../dist/css/blocks/footer/scss/block-footer.css"
+    "file:../../../dist/css/blocks/gallery/scss/block-gallery.css"
   ],
-  "script": "block-footer",
+  "script": "block-gallery",
   "category": "hm-sections",
-  "icon": "insert-before",
+  "icon": "format-gallery",
   "apiVersion": 2,
   "keywords": [],
   "acf": {
@@ -39,7 +39,7 @@
     "attributes": {
       "mode": "preview",
       "data": {
-        "block_preview_images": "block-footer.png"
+        "block_preview_images": "block-gallery.png"
       }
     }
   }

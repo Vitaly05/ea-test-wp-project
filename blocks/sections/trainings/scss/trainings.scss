@@ -1,0 +1,231 @@
+/* ------------------------------------------------------------ *\
+	Generic
+\* ------------------------------------------------------------ */
+
+@import '../../../../resources/scss/generic/variables';
+@import '../../../../resources/scss/generic/functions';
+@import '../../../../resources/scss/generic/mixins';
+
+/* ------------------------------------------------------------ *\
+	Blocks: Section Trainings
+\* ------------------------------------------------------------ */
+
+// TRAININGS
+
+.trainings-section {
+  background-color: $background-main;
+
+  .container {
+    padding-top: 110px;
+    padding-bottom: 110px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+
+    @include breakpoint-down(small-desktop) {
+      padding-top: 80px;
+      padding-bottom: 80px;
+
+      flex-direction: column;
+      justify-content: stretch;
+      align-items: start;
+    }
+
+    @include breakpoint-down(mobile-small) {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+}
+
+.trainings-section__text-block {
+  padding-left: 16.5px;
+
+  width: 651px;
+
+  border-left: 3px solid $color-primary;
+
+  @include breakpoint-down(small-desktop) {
+    width: 100%;
+  }
+}
+
+.trainings-section__title {
+  color: $text-secondary;
+
+  font-family: $font-secondary;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 100%;
+  text-transform: uppercase;
+
+  @include breakpoint-down(large-desktop) {
+    font-size: 22px;
+  }
+
+  @include breakpoint-down(mobile-small) {
+    font-size: 20px;
+  }
+}
+
+.trainings-section__heading {
+  margin-top: 20px;
+
+  color: $text-secondary;
+
+  font-family: $font-main;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 100%;
+
+  @include breakpoint-down(large-desktop) {
+    font-size: 45px;
+  }
+
+  @include breakpoint-down(mobile-small) {
+    font-size: 30px;
+  }
+}
+
+.trainings-section__text {
+  margin-top: 30px;
+
+  color: $text-secondary;
+
+  font-family: $font-secondary;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: -0.05em;
+
+  @include breakpoint-down(large-desktop) {
+    font-size: 16px;
+  }
+}
+
+.trainings-section__offers {
+  --max-width: 681px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  max-width: var(--max-width);
+
+  @include breakpoint-down(mobile) {
+    --max-width: 100%;
+  }
+}
+
+.trainings-section__tabs {
+  max-width: var(--max-width);
+
+  overflow: hidden;
+
+  .nav-tabs {
+    margin-left: auto;
+    margin-right: auto;
+
+    flex-wrap: nowrap;
+    width: max-content;
+  }
+
+  .nav-link {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    width: 108px;
+
+    color: $text-secondary;
+    border-bottom: 2px solid transparentize($black, 0.9);
+
+    font-family: $font-main;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+
+    transition:
+      border-color $transition-default,
+      color $transition-default;
+
+    &.active {
+      cursor: default;
+
+      color: $color-primary;
+      border-color: $color-primary;
+    }
+
+    &:not(.active):hover {
+      color: transparentize($text-secondary, 0.2);
+      border-color: transparentize($text-secondary, 0.2);
+    }
+
+    &:focus-visible {
+      box-shadow: inset 0 0 0 1px $color-primary-hover;
+    }
+  }
+}
+
+.trainings-section__items {
+  margin-top: 30px;
+}
+
+.trainings-section__offers-grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: var(--max-width);
+}
+
+.offers-grid__item {
+  padding-top: 54px;
+  padding-bottom: 54px;
+  padding-left: 24px;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 227px;
+  height: 122px;
+
+  box-shadow: inset 0 0 0 1px transparentize($black, 0.9);
+
+  @include breakpoint-down(mobile) {
+    width: 50%;
+  }
+
+  @include breakpoint-down(mobile-small) {
+    padding-left: 10px;
+  }
+
+  svg {
+    color: $color-primary;
+  }
+
+  .offer__text {
+    color: $text-ternary;
+
+    font-family: $font-main;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    text-transform: uppercase;
+
+    transition: background-color $transition-default;
+
+    @include breakpoint-down(mobile-small) {
+      font-size: 14px;
+    }
+  }
+
+  &:hover {
+    background-color: transparentize($color-secondary, 0.8);
+  }
+}

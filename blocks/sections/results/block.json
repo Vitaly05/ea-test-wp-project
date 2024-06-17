@@ -1,13 +1,13 @@
 {
-  "name": "footer",
-  "title": "Footer",
+  "name": "results",
+  "title": "Results",
   "description": "",
   "style": [
-    "file:../../../dist/css/blocks/footer/scss/block-footer.css"
+    "file:../../../dist/css/blocks/results/scss/block-results.css"
   ],
-  "script": "block-footer",
+  "script": "block-results",
   "category": "hm-sections",
-  "icon": "insert-before",
+  "icon": "images-alt2",
   "apiVersion": 2,
   "keywords": [],
   "acf": {
@@ -39,7 +39,7 @@
     "attributes": {
       "mode": "preview",
       "data": {
-        "block_preview_images": "block-footer.png"
+        "block_preview_images": "block-results.png"
       }
     }
   }
