@@ -167,6 +167,10 @@
     justify-content: space-between;
     height: 100%;
 
+    @include breakpoint-down(tablet) {
+      gap: 20px;
+    }
+
     @include breakpoint-down(mobile) {
       flex-direction: column;
       justify-content: center;
@@ -176,16 +180,34 @@
 }
 
 .header-menu__navigation-wrap {
-  --margin: 50%;
+  --margin: 15%;
   margin-top: var(--margin);
   margin-bottom: var(--margin);
 
+  height: 100%;
+
+  .header-menu__navigation {
+    max-height: 700px;
+  }
+
   @media (max-height: 1150px) {
-    --margin: 30%;
+    --margin: 10%;
+
+    .header-menu__navigation {
+      max-height: 500px;
+    }
   }
 
   @media (max-height: 746px) {
-    --margin: 10%;
+    --margin: 5%;
+  }
+
+  @include breakpoint-down(mobile) {
+    margin-top: 50px;
+    margin-bottom: 0;
+
+    max-height: 50%;
+    height: 50%;
   }
 }
 
@@ -244,10 +266,6 @@
     &::before {
       background-color: $color-primary;
     }
-  }
-
-  @include breakpoint-down(mobile) {
-    height: auto;
   }
 }
 
