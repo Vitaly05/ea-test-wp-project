@@ -1,0 +1,175 @@
+/* ------------------------------------------------------------ *\
+	Generic
+\* ------------------------------------------------------------ */
+
+@import '../../../../resources/scss/generic/variables';
+@import '../../../../resources/scss/generic/functions';
+@import '../../../../resources/scss/generic/mixins';
+
+/* ------------------------------------------------------------ *\
+	Blocks: Section Resources
+\* ------------------------------------------------------------ */
+
+.resources-section {
+  background-color: $background-main;
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.resources__left-image {
+  align-self: flex-end;
+  height: 1044px;
+
+  @include breakpoint-down(large-desktop) {
+    display: none;
+  }
+}
+
+.resources__content {
+  margin-top: 127px;
+  margin-bottom: 53px;
+
+  @include breakpoint-down(large-desktop) {
+    margin-top: 70px;
+    margin-bottom: 100px;
+  }
+
+  @include breakpoint-down(mobile) {
+    margin-top: 50px;
+    margin-bottom: 70px;
+  }
+}
+
+.resources__section-title {
+  font-size: 100px;
+  line-height: 100%;
+
+  @include breakpoint-down(large-desktop) {
+    font-size: 50px;
+  }
+
+  @include breakpoint-down(mobile) {
+    font-size: 40px;
+  }
+}
+
+.resources__section-text {
+  margin-top: 20px;
+
+  font-size: 24px;
+
+  @include breakpoint-down(large-desktop) {
+    margin-top: 9px;
+
+    font-size: 20px;
+  }
+
+  @include breakpoint-down(mobile) {
+    margin-top: 10px;
+  }
+}
+
+.resources__cards {
+  --row-height: 314px;
+  --column-width: 344px;
+  --card-image-height: 200px;
+
+  margin-top: 50px;
+
+  display: grid;
+  grid-template-columns: repeat(2, var(--column-width));
+  grid-template-rows: repeat(2, var(--row-height));
+  gap: 10px;
+
+  @include breakpoint-down(large-desktop) {
+    --row-height: 310px;
+    --column-width: 339px;
+
+    margin-top: 30px;
+  }
+
+  @include breakpoint-down(mobile) {
+    --row-height: 310px;
+    --column-width: 320px;
+
+    grid-template-columns: var(--column-width);
+    justify-content: center;
+
+    margin-top: 30px;
+
+    .resources__card:nth-child(n + 3) {
+      display: none;
+    }
+  }
+}
+
+.resources__card {
+  border-radius: 2px;
+  overflow: hidden;
+
+  transition:
+    box-shadow $transition-default,
+    border-radius $transition-default;
+
+  &:hover {
+    border-radius: 0;
+    box-shadow: 0 0 0 2px $color-secondary;
+  }
+
+  .card__image {
+    width: 100%;
+    height: var(--card-image-height);
+
+    object-fit: cover;
+  }
+
+  .card__info {
+    padding: 20px;
+
+    height: calc(var(--row-height) - var(--card-image-height));
+
+    background-color: $white;
+  }
+
+  .card__date {
+    color: transparentize($color-secondary, 0.5);
+
+    font-family: $font-secondary;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: -0.05em;
+  }
+
+  .card__text {
+    --text-lines: 2;
+
+    margin-top: 10px;
+
+    color: $color-secondary;
+
+    font-family: $font-main;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 140%;
+
+    @include breakpoint-down(large-desktop) {
+      font-size: 14px;
+    }
+  }
+}
+
+.resources__button {
+  margin-top: 77px;
+  margin-left: auto;
+
+  width: max-content;
+
+  @include breakpoint-down(large-desktop) {
+    margin-top: 20px;
+    margin-right: auto;
+  }
+}

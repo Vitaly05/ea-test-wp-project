@@ -11,9 +11,9 @@
 /**
  * Block preview image
  */
-if ( isset( $block['data']['block_preview_images'] ) ) {
-	hm_get_template_part_with_params( 'fragments/block-preview-image', ['block' => $block] );
-	return;
+if (isset($block['data']['block_preview_images'])) {
+  hm_get_template_part_with_params('fragments/block-preview-image', ['block' => $block]);
+  return;
 }
 
 /**
