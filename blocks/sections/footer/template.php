@@ -11,9 +11,9 @@
 /**
  * Block preview image
  */
-if ( isset( $block['data']['block_preview_images'] ) ) {
-	hm_get_template_part_with_params( 'fragments/block-preview-image', ['block' => $block] );
-	return;
+if (isset($block['data']['block_preview_images'])) {
+  hm_get_template_part_with_params('fragments/block-preview-image', ['block' => $block]);
+  return;
 }
 
 /**
@@ -61,7 +61,7 @@ $address = get_field('footer_address');
             </div>
             <div class="contact__text">
               <a class="underline-hover" href="javascript:void(0)" aria-label="Открыть наше местоположение на картах'">
-                <php echo $address; ?>
+                <?php echo $address; ?>
               </a>
             </div>
           </div>
@@ -80,7 +80,8 @@ $address = get_field('footer_address');
                 </defs>
               </svg>
             </div>
-            <a class="contact__text underline-hover" href="tel:<?php echo $phone_group['href_number']; ?>" aria-label="позвонить нам">
+            <a class="contact__text underline-hover" href="tel:<?php echo $phone_group['href_number']; ?>"
+              aria-label="позвонить нам">
               <?php echo $phone_group['displayed_string']; ?>
             </a>
           </div>
