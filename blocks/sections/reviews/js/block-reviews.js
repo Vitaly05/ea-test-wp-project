@@ -36,6 +36,14 @@ const init = function() {
       scrollX: false
     });
   })
+
+  $('.js-reviews-read-more-collapse').on('click', function() {
+    if ($(this).hasClass('collapsed')) {
+      $(this).text('Read More')
+    } else {
+      $(this).text('Read Less')
+    }
+  })
 }
 
 

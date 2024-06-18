@@ -27,21 +27,20 @@
             "label": "Intro Text",
             "name": "reviews_section_intro_text",
             "aria-label": "",
-            "type": "textarea",
+            "type": "wysiwyg",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "default_value": "business. Knowing I had more to offer the universe, I got the crazy idea to open my own brick and mortar fitness business. It was an itch that I had to scratch. In 2010 The Happy Fitness was born…",
-            "acfe_textarea_code": 0,
-            "maxlength": "",
-            "rows": "",
-            "placeholder": "",
-            "new_lines": ""
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 0
         },
         {
             "key": "field_66704ffdec4c5",
@@ -180,5 +179,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1718638750
+    "modified": 1718730231
 }

@@ -110,12 +110,16 @@
   }
 
   .reviews-section__text {
-    margin-top: 30px;
+    &.text_before {
+      margin-top: 30px;
+    }
 
     max-width: 400px;
 
     @include breakpoint-down(mobile) {
-      margin-top: 20px;
+      &.text_before {
+        margin-top: 20px;
+      }
     }
   }
 

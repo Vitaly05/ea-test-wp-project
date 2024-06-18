@@ -25,6 +25,13 @@ $section_intro_text = get_field('reviews_section_intro_text');
 $reviews_title = get_field('reviews_title');
 $reviews = get_field('reviews');
 
+$more_tag_position = strpos($section_intro_text, '<!--more-->');
+
+if ($more_tag_position !== false) {
+  $content_before_more = substr($section_intro_text, 0, $more_tag_position);
+  $content_after_more = substr($section_intro_text, $more_tag_position + strlen('<!--more-->'));
+}
+
 ?>
 
 <?php if ($reviews): ?>
@@ -38,12 +45,18 @@ $reviews = get_field('reviews');
           <div class="section-title">
             <?php echo $section_intro_title; ?>
           </div>
-          <div class="section-text reviews-section__text">
-            <?php echo $section_intro_text; ?>
+          <div class="section-text reviews-section__text text_before">
+            <?php echo !empty($content_before_more) ? $content_before_more : $section_intro_text; ?>
           </div>
-          <button class="button button--text">
-            Read more
-          </button>
+          <?php if (!empty($content_after_more)): ?>
+            <div class="section-text reviews-section__text collapse" id="text-after-more">
+              <?php echo $content_after_more; ?>
+            </div>
+            <button class="button button--text js-reviews-read-more-collapse" data-bs-toggle="collapse"
+              data-bs-target="#text-after-more" role="button">
+              Read more
+            </button>
+          <?php endif; ?>
           <div class="reviews-section__actions">
             <button class="button">Watch Video of The Bio</button>
             <button class="button button--outline button--color-primary">Learn More</button>
