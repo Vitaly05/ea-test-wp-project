@@ -3,6 +3,8 @@
  */
 import Swiper, { Navigation, Pagination } from 'swiper'
 import { initScript } from '../../../../resources/js/utils/init-script'
+import { verticalScroll } from '../../../../resources/js/modules/horizontal-scroll'
+import customScrollbar from '../../../../resources/js/modules/custom-scrollbar'
 
 const init = function() {
 	const $section = $( this )
@@ -12,6 +14,7 @@ const init = function() {
     modules: [Navigation, Pagination],
 
     loop: true,
+    allowTouchMove: false,
 
     navigation: {
       nextEl: '#reviews__slider-button-next',
@@ -22,6 +25,16 @@ const init = function() {
       el: '#reviews__slider-pagination',
       clickable: true
     }
+  })
+
+  $('#reviews__swiper .js-custom-vertical-scroll').each(function() {
+    verticalScroll($(this).parent())
+    $(this).scrollbar({
+      ignoreMobile: true,
+      ignoreOverlay: true,
+      passive: true,
+      scrollX: false
+    });
   })
 }
 

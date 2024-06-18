@@ -194,6 +194,10 @@
     height: auto;
   }
 
+  .swiper-slide {
+    border-left: 3px solid $color-primary;
+  }
+
   .review__title {
     color: $text-secondary;
 
@@ -210,6 +214,7 @@
 
   .review__stars {
     margin-top: 10px;
+    margin-bottom: 20px;
 
     display: flex;
     gap: 5px;
@@ -218,9 +223,12 @@
   }
 
   .review__text {
-    margin-top: 20px;
+    padding-right: 10px;
 
-    max-width: 495px;
+    max-width: 510px;
+    max-height: 322px;
+
+    overflow: hidden;
   }
 
   .swiper__controls {
@@ -231,5 +239,8 @@
 .reviews-swiper__review {
   padding-left: 16px;
 
-  border-left: 3px solid $color-primary;
+  height: 400px;
+  max-height: 400px;
+
+  overflow: hidden;
 }
