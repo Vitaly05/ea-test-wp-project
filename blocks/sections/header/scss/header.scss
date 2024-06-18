@@ -175,12 +175,29 @@
   }
 }
 
+.header-menu__navigation-wrap {
+  --margin: 50%;
+  margin-top: var(--margin);
+  margin-bottom: var(--margin);
+
+  @media (max-height: 1150px) {
+    --margin: 30%;
+  }
+
+  @media (max-height: 746px) {
+    --margin: 10%;
+  }
+}
+
 .header-menu__navigation {
+  padding-right: 10px;
+
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: 20px;
   height: 100%;
+
+  overflow: hidden;
 
   &:has(.header-menu__link:hover) {
     .header-menu__link--active:not(:hover) {

@@ -11,9 +11,9 @@
 /**
  * Block preview image
  */
-if ( isset( $block['data']['block_preview_images'] ) ) {
-	hm_get_template_part_with_params( 'fragments/block-preview-image', ['block' => $block] );
-	return;
+if (isset($block['data']['block_preview_images'])) {
+  hm_get_template_part_with_params('fragments/block-preview-image', ['block' => $block]);
+  return;
 }
 
 /**
@@ -22,6 +22,7 @@ if ( isset( $block['data']['block_preview_images'] ) ) {
 
 $phone_group = get_field('header_phone');
 $address = get_field('header_address');
+$menu_items = get_field('header_menu_items');
 
 ?>
 
@@ -133,7 +134,8 @@ $address = get_field('header_address');
             </svg>
           </div>
         </button>
-        <button class="button" data-bs-toggle="modal" data-bs-target="#consultation-modal" aria-label="Перейти к консультации">
+        <button class="button" data-bs-toggle="modal" data-bs-target="#consultation-modal"
+          aria-label="Перейти к консультации">
           Book Consultation
         </button>
       </div>
@@ -141,27 +143,18 @@ $address = get_field('header_address');
   </div>
   <div class="header__menu js-header-menu">
     <div class="container">
-      <div class="header-menu__navigation">
-        <a class="header-menu__link header-menu__link--active" href="javascript:void(0)"
-          aria-label="Перейти на главную">
-          Main
-        </a>
-        <a class="header-menu__link" href="javascript:void(0)" aria-label="Перейти на страницу 'о нас'">
-          About Us
-        </a>
-        <a class="header-menu__link" href="javascript:void(0)" aria-label="Связаться с нами">
-          Contact Us
-        </a>
-        <a class="header-menu__link" href="javascript:void(0)" aria-label="Перейти на страницу 'до и после'">
-          Before & Afters
-        </a>
-        <a class="header-menu__link" href="javascript:void(0)" aria-label="Перейти к ресурсам">
-          Resources
-        </a>
-        <a class="header-menu__link" href="javascript:void(0)" aria-label="Перейти на страницу оплаты">
-          Payment
-        </a>
-      </div>
+      <?php if ($menu_items): ?>
+        <div class="header-menu__navigation-wrap">
+          <div class="header-menu__navigation js-vertical-scroll scrollbar-outer" id="header-menu__navigation">
+            <?php foreach ($menu_items as $key => $menu_item): ?>
+              <a class="header-menu__link <?php echo $key === 0 ? 'header-menu__link--active' : '' ?>"
+                href="<?php echo $menu_item['url']; ?>" aria-label="<?php echo $menu_item['aria_label']; ?>">
+                <?php echo $menu_item['text']; ?>
+              </a>
+            <?php endforeach; ?>
+          </div>
+        </div>
+      <?php endif; ?>
       <div class="header-menu__contacts">
         <div class="header-menu__contact">
           <div class="contact__icon">
@@ -195,7 +188,8 @@ $address = get_field('header_address');
               </defs>
             </svg>
           </div>
-          <a class="contact__text underline-hover" href="tel:<?php echo $phone_group['href_number']; ?>" aria-label="Позвонить нам">
+          <a class="contact__text underline-hover" href="tel:<?php echo $phone_group['href_number']; ?>"
+            aria-label="Позвонить нам">
             <?php echo $phone_group['displayed_string']; ?>
           </a>
         </div>

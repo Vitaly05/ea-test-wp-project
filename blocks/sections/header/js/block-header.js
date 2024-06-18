@@ -1,6 +1,7 @@
 /**
  * Internal Dependencies
  */
+import { verticalScroll } from '../../../../resources/js/modules/horizontal-scroll'
 import { initScript } from '../../../../resources/js/utils/init-script'
 
 const init = function() {
@@ -35,6 +36,14 @@ const init = function() {
   observer.observe(target)
 
   setTabIndex('.js-header-menu a', -1)
+
+  verticalScroll($('#header-menu__navigation').parent())
+  $('#header-menu__navigation').scrollbar({
+    ignoreMobile: true,
+    ignoreOverlay: true,
+    passive: true,
+    scrollX: false
+  });
 
   function setTabIndex(selector, value) {
     $(selector).each(function() {
