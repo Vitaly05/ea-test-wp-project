@@ -40,15 +40,21 @@
   }
 }
 
-.hero-menu {
+.scroll-wrapper.hero-menu {
   margin-top: 320px;
   margin-bottom: 320px;
 
+  max-height: 600px;
+}
+
+.hero-menu {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  // justify-content: center;
   gap: 26px;
+
+  overflow: hidden;
 
   &:has(.hero-menu__link:hover) {
     .hero-menu__link--active:not(:hover) {
@@ -60,6 +66,7 @@
     position: relative;
 
     padding-left: 15px;
+
     color: $text-primary;
     opacity: 0.5;
 

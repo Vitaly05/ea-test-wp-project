@@ -64,6 +64,15 @@ const init = function() {
     })
   })
 
+  verticalScroll($('#hero-menu').parent())
+  $('#hero-menu').scrollbar({
+    ignoreMobile: true,
+    ignoreOverlay: true,
+    passive: true,
+    scrollX: false
+  });
+
+
   function startPlayer(player, playerButton) {
     playerButton.addClass('pause-button')
     player.play()

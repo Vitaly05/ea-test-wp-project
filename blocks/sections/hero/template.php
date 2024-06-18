@@ -11,9 +11,9 @@
 /**
  * Block preview image
  */
-if ( isset( $block['data']['block_preview_images'] ) ) {
-	hm_get_template_part_with_params( 'fragments/block-preview-image', ['block' => $block] );
-	return;
+if (isset($block['data']['block_preview_images'])) {
+  hm_get_template_part_with_params('fragments/block-preview-image', ['block' => $block]);
+  return;
 }
 
 /**
@@ -24,34 +24,36 @@ $section_title = get_field('hero_section_title');
 $section_text = get_field('hero_section_text');
 $section_background = get_field('hero_background');
 $youtube_video_id = get_field('youtube_video_id');
+$menu_items = get_field('hero_menu_items');
+
 ?>
 
 <section class="section">
   <div class="hero__header-collapse js-collapse-header"></div>
   <div class="background-img">
-      <?php if (!empty($section_background)): ?>
-        <img src="<?php echo $section_background['url']; ?>" alt="<?php echo $section_background['alt']; ?>">
-      <?php endif; ?>
-      <div class="background-filter section-hero__bg-filter"></div>
-    </div>
+    <?php if (!empty($section_background)): ?>
+      <img src="<?php echo $section_background['url']; ?>" alt="<?php echo $section_background['alt']; ?>">
+    <?php endif; ?>
+    <div class="background-filter section-hero__bg-filter"></div>
+  </div>
   <div class="section-hero">
     <div class="container">
-      <div class="hero-menu">
-        <a class="hero-menu__link hero-menu__link--active" href="javascript:void(0)"
-          aria-label="Перейти на главную страницу">Main</a>
-        <a class="hero-menu__link" href="javascript:void(0)" aria-label="Перейти на страницу 'о нас'">About Us</a>
-        <a class="hero-menu__link" href="javascript:void(0)" aria-label="Связаться с нами">Contact Us</a>
-        <a class="hero-menu__link" href="javascript:void(0)" aria-label="Перейти на страницу 'до и после'">Before &
-          After</a>
-        <a class="hero-menu__link" href="javascript:void(0)" aria-label="Перейти к ресурсам">Resources</a>
-        <a class="hero-menu__link" href="javascript:void(0)" aria-label="Перейти на страницу оплаты">Payment</a>
-      </div>
+      <?php if ($menu_items): ?>
+        <div class="hero-menu js-vertical-scroll scrollbar-outer" id="hero-menu">
+          <?php foreach ($menu_items as $key => $menu_item): ?>
+            <a class="hero-menu__link <?php echo $key === 0 ? 'hero-menu__link--active' : '' ?>"
+              href="<?php echo $menu_item['url']; ?>" aria-label="<?php echo $menu_item['aria_label']; ?>">
+              <?php echo $menu_item['text']; ?>
+            </a>
+          <?php endforeach; ?>
+        </div>
+      <?php endif; ?>
       <div class="hero-intro">
         <div class="hero-intro__title">
           <?php echo $section_title; ?>
         </div>
         <div class="hero-intro__text">
-        <?php echo $section_text; ?>
+          <?php echo $section_text; ?>
         </div>
         <div class="hero-intro__actions">
           <button class="button" data-bs-toggle="modal" data-bs-target="#consultation-modal"
@@ -188,8 +190,8 @@ $youtube_video_id = get_field('youtube_video_id');
     </div>
   </div>
 
-  <div class="modal fade modal-xl video-modal" id="yt-video-modal" data-video-id="<?php echo $youtube_video_id; ?>" tabindex="-1"
-    aria-hidden="true">
+  <div class="modal fade modal-xl video-modal" id="yt-video-modal" data-video-id="<?php echo $youtube_video_id; ?>"
+    tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
