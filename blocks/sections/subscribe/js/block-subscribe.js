@@ -7,7 +7,7 @@ import { initScript } from '../../../../resources/js/utils/init-script'
 const init = function() {
 	const $section = $( this )
 
-  $('.field-wrap').each(function() {
+  $('.field-wrap:not(.submit-wrap)').each(function() {
     $(this).on('click', () => {
       console.log($(this).find('.nf-element'))
       $(this).find('.nf-element').trigger('focus')
