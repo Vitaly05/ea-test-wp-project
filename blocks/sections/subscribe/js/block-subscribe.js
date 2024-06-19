@@ -14,8 +14,14 @@ jQuery(document).on('nfFormSubmitResponse', function(e, obj) {
 
   closeAllModals()
 
-  $('#js-success-modal').find('#js-modal-message').html(message)
-  $('#js-success-modal').modal('show')
+  let modalSelector = '#js-success-modal'
+  if (message.includes('&lt;error&gt;')) {
+    modalSelector = '#js-error-modal'
+    message = message.replace('&lt;error&gt;', '')
+  }
+
+  $(modalSelector).find('#js-modal-message').html(message)
+  $(modalSelector).modal('show')
 })
 
 
