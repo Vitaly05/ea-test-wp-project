@@ -18,10 +18,9 @@ const init = function() {
     })
   })
 
-
   const modalYtPlayer = YouTubePlayer('modal-yt-player')
   const defaultVideoId = 'TyjgGSTA0QQ'
-  const videoId = $('#yt-video-modal').data('video-id')
+  const videoId = $('#youtube-video-modal').data('video-id')
 
   if (videoId) {
     modalYtPlayer.loadVideoById(videoId)
@@ -29,28 +28,30 @@ const init = function() {
     modalYtPlayer.loadVideoById(defaultVideoId)
   }
 
-  $('#yt-video-modal').on('shown.bs.modal', function() {
+  modalYtPlayer.stopVideo()
+
+  $('#youtube-video-modal').on('shown.bs.modal', function() {
     stopAllVideos()
     modalYtPlayer.playVideo()
   })
 
-  $('#yt-video-modal').on('hide.bs.modal', function() {
+  $('#youtube-video-modal').on('hide.bs.modal', function() {
     modalYtPlayer.pauseVideo()
   })
 
   const modalPlayer = $('#modal__video-1').get(0)
   const modalPlayerButton = $('[data-player-id="modal__video-1"]')
   
-  $('#video-modal').on('shown.bs.modal', function() {
+  $('#file-video-modal').on('shown.bs.modal', function() {
     stopAllVideos()
     startPlayer(modalPlayer, modalPlayerButton)
   })
 
-  $('#video-modal').on('hide.bs.modal', function() {
+  $('#file-video-modal').on('hide.bs.modal', function() {
     stopPlayer(modalPlayer, modalPlayerButton)
   })
 
-  $('#video-modal .video__player-button').each(function() {
+  $('#file-video-modal .video__player-button').each(function() {
     $(this).on('click', function() {
       const playerId = $(this).data('playerId')
       const player = $(`#${playerId}`).get(0)

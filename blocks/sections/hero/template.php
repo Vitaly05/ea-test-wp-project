@@ -23,10 +23,10 @@ if (isset($block['data']['block_preview_images'])) {
 $section_title = get_field('hero_section_title');
 $section_text = get_field('hero_section_text');
 $section_background = get_field('hero_background');
-$youtube_video_id = get_field('youtube_video_id');
 $menu_items = get_field('hero_menu_items');
+$video = get_field('hero_video')
 
-?>
+  ?>
 
 <section class="section">
   <div class="hero__header-collapse js-collapse-header"></div>
@@ -60,8 +60,8 @@ $menu_items = get_field('hero_menu_items');
             aria-label="Перейти к консультации">
             Book Consultation
           </button>
-          <button class="button button--outline" data-bs-toggle="modal" data-bs-target="#yt-video-modal"
-            aria-label="Смотреть видео">
+          <button class="button button--outline" data-bs-toggle="modal"
+            data-bs-target="#<?php echo $video['video_type']; ?>-video-modal" aria-label="Смотреть видео">
             <svg class="button__icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
               xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_408_4555)">
@@ -144,7 +144,7 @@ $menu_items = get_field('hero_menu_items');
     </div>
   </div>
 
-  <div class="modal fade modal-xl video-modal" id="video-modal" tabindex="-1" aria-hidden="true">
+  <div class="modal fade modal-xl video-modal" id="file-video-modal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
@@ -167,7 +167,7 @@ $menu_items = get_field('hero_menu_items');
           <div class="modal__video video">
             <video id="modal__video-1"
               poster="/wp-content/themes/testproject/resources/videos/testimonials/poster-2.jpg">
-              <source src="/wp-content/themes/testproject/resources/videos/testimonials/t-2.mp4" type="video/mp4" />
+              <source src="<?php echo $video['video_file']['url'] ?>" />
             </video>
             <button class="button-icon button-icon--transparent video__player-button" data-player-id="modal__video-1">
               <svg class="play-icon" width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
@@ -190,8 +190,8 @@ $menu_items = get_field('hero_menu_items');
     </div>
   </div>
 
-  <div class="modal fade modal-xl video-modal" id="yt-video-modal" data-video-id="<?php echo $youtube_video_id; ?>"
-    tabindex="-1" aria-hidden="true">
+  <div class="modal fade modal-xl video-modal" id="youtube-video-modal"
+    data-video-id="<?php echo $video['video_id']; ?>" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
