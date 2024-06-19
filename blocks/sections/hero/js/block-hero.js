@@ -2,7 +2,7 @@
  * Internal Dependencies
  */
 import { initScript } from '../../../../resources/js/utils/init-script'
-import { verticalScroll } from '../../../../resources/js/modules/horizontal-scroll'
+import { verticalCurrentElScroll, verticalScroll } from '../../../../resources/js/modules/horizontal-scroll'
 import YouTubePlayer from 'youtube-player'
 import { stopAllVideos } from '../../../../resources/js/functions'
 
@@ -10,7 +10,7 @@ import { stopAllVideos } from '../../../../resources/js/functions'
 const init = function() {
 	const $section = $( this )
 
-  verticalScroll($('#consultation-modal'))
+  verticalCurrentElScroll($('#nf-field-14'))
 
   $('.text-field-wrap').each(function() {
     $(this).on('click', function() {

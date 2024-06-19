@@ -144,6 +144,10 @@
       font-size: 16px;
       line-height: 100%;
     }
+
+    @include hover() {
+      background: $color-primary-hover;
+    }
   }
 
   .nf-field-container {
@@ -154,7 +158,7 @@
     margin-bottom: 0;
   }
 
-  #nf-field-8-wrap {
+  #nf-field-16-wrap {
     cursor: text;
     position: relative;
 
@@ -190,7 +194,7 @@
     }
   }
 
-  #nf-field-8 {
+  #nf-field-16 {
     color: $white;
     border: none;
     background: transparent;
@@ -222,7 +226,9 @@
     font-size: 16px;
     line-height: 100%;
 
-    transition: transform $transition-default;
+    transition:
+      transform $transition-default,
+      font-size $transition-default;
 
     @include breakpoint-down(desktop) {
       left: 15px;
@@ -231,18 +237,28 @@
     }
   }
 
-  &:has(#nf-field-8:not(:placeholder-shown)),
-  &:has(#nf-field-8:focus) {
-    #nf-field-8-wrap .nf-field-label {
+  &:has(#nf-field-16:not(:placeholder-shown)),
+  &:has(#nf-field-16:focus) {
+    #nf-field-16-wrap .nf-field-label {
       transform: translateY(-120%);
     }
   }
 
-  #nf-error-8 {
+  #nf-error-16 {
     position: absolute;
     bottom: 0;
     left: 0;
     transform: translateY(100%);
+
+    margin-right: 0;
+
+    max-width: 200px;
+
+    @include breakpoint-down(mobile-small) {
+      max-width: 150px;
+
+      font-size: 12px;
+    }
   }
 
   .nf-response-msg {

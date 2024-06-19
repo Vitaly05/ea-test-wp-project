@@ -4,3 +4,9 @@ export function stopAllVideos() {
     $(this).find('.video__player-button').removeClass('pause-button')
   })
 }
+
+export function closeAllModals() {
+  $('.modal').each(function() {
+    $(this).modal('hide')
+  })
+}

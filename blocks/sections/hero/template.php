@@ -107,38 +107,7 @@ $video = get_field('hero_video')
           </div>
         </div>
         <div class="modal-body">
-          <form>
-            <div class="modal-body__row">
-              <div class="text-field-wrap" data-placeholder="First Name">
-                <label class="visibility-hidden" for="first-name-input">Имя</label>
-                <input class="text-field" id="first-name-input" type="text" name="first-name" placeholder="" />
-              </div>
-              <div class="text-field-wrap" data-placeholder="Last Name">
-                <label class="visibility-hidden" for="last-name-input">Фамилия</label>
-                <input class="text-field" id="last-name-input" type="text" name="last-name" placeholder="" />
-              </div>
-            </div>
-            <div class="modal-body__row">
-              <div class="text-field-wrap" data-placeholder="Email">
-                <label class="visibility-hidden" for="email-input">Почта</label>
-                <input class="text-field" id="email-input" type="email" autocomplete="email" name="email"
-                  placeholder="" />
-              </div>
-              <div class="text-field-wrap" data-placeholder="Phone Number">
-                <label class="visibility-hidden" for="phone-number-input">Номер телефона</label>
-                <input class="text-field" id="phone-number-input" type="text" name="phone-number" placeholder="" />
-              </div>
-            </div>
-            <div class="text-field-wrap" data-placeholder="Message">
-              <label class="visibility-hidden" for="message-input">Сообщение</label>
-              <textarea class="text-field js-vertical-scroll" id="message-input" name="message"
-                placeholder=""></textarea>
-            </div>
-            <input type="submit" hidden />
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button class="button" data-bs-dismiss="modal" aria-label="Отправить данные для консультации">Submit</button>
+          <?php echo do_shortcode('[ninja_form id=3]'); ?>
         </div>
       </div>
     </div>

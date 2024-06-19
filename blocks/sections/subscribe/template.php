@@ -105,7 +105,6 @@ $section_text = get_field('subscribe_text');
                     </clipPath>
                   </defs>
                 </svg>
-
                 Pay Now
               </button>
             </div>

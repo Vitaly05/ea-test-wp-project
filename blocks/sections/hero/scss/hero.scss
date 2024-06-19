@@ -221,34 +221,180 @@
     }
   }
 
-  .modal-body form {
+  .modal-body {
     --margin: 70px;
 
     margin-top: 50px;
     margin-left: var(--margin);
     margin-right: var(--margin);
-
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+    margin-bottom: var(--margin);
 
     @include breakpoint-down(mobile) {
       --margin: 50px;
-
-      margin-top: 30px;
-
-      gap: 20px;
     }
 
     @include breakpoint-down(mobile-small) {
       --margin: 20px;
+
+      margin-top: 30px;
+    }
+  }
+
+  .modal-body__row {
+    display: flex;
+    gap: 21px;
+
+    @include breakpoint-down(mobile) {
+      gap: 20px;
     }
 
-    .modal-body__row {
+    @include breakpoint-down(mobile-small) {
+      flex-direction: column;
+    }
+  }
+}
+
+.consultation-modal {
+  .nf-before-form-content,
+  .nf-after-form-content,
+  .ninja-forms-req-symbol {
+    display: none;
+  }
+
+  .nf-field-container {
+    margin-bottom: 0;
+  }
+
+  .nf-field-label {
+    margin-bottom: 0;
+  }
+
+  .field-wrap:not(.submit-wrap) {
+    cursor: text;
+    position: relative;
+
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 56px;
+
+    border: 1px solid transparentize($color-secondary, 0.5);
+    border-radius: 2px;
+    color: $text-secondary;
+
+    transition: border-color $transition-default;
+
+    @include hover {
+      border-color: $color-secondary;
+    }
+
+    @include breakpoint-down(desktop) {
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-bottom: 5px;
+
+      height: 44px;
+    }
+
+    @include breakpoint-down(mobile) {
+      font-size: 14px;
+    }
+  }
+
+  .ninja-forms-field {
+    border: none;
+    background: transparent;
+
+    font-family: $font-main;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+
+    &::placeholder {
+      color: transparent;
+    }
+
+    @include breakpoint-down(desktop) {
+      font-size: 14px;
+    }
+  }
+
+  .nf-field-label {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+
+    color: transparentize($color-secondary, 0.5);
+
+    font-family: $font-main;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+
+    transition:
+      transform $transition-default,
+      font-size $transition-default;
+
+    @include breakpoint-down(desktop) {
+      left: 15px;
+
+      font-size: 14px;
+    }
+  }
+
+  @for $i from 10 through 13 {
+    &:has(#nf-field-#{$i}:not(:placeholder-shown)),
+    &:has(#nf-field-#{$i}:focus) {
+      #nf-field-#{$i}-wrap .nf-field-label {
+        transform: translateY(-120%);
+
+        font-size: 12px;
+      }
+    }
+  }
+
+  &:has(#nf-field-14:not(:placeholder-shown)),
+  &:has(#nf-field-14:focus) {
+    #nf-field-14-wrap .nf-field-label {
+      top: 10px;
+
+      font-size: 12px;
+    }
+  }
+
+  #nf-error-8 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+  }
+
+  .nf-response-msg {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  .nf-row {
+    nf-cells {
       display: flex;
       gap: 21px;
 
-      @include breakpoint-down(mobile) {
+      @include breakpoint-down(desktop) {
         gap: 20px;
       }
 
@@ -258,23 +404,71 @@
     }
   }
 
-  .modal-footer {
-    --margin: 70px;
-
+  .nf-row:not(:first-child) {
     margin-top: 30px;
-    margin-bottom: var(--margin);
-    margin-left: var(--margin);
-    margin-right: var(--margin);
 
-    @include breakpoint-down(mobile) {
-      --margin: 50px;
-
+    @include breakpoint-down(desktop) {
       margin-top: 20px;
     }
+  }
 
-    @include breakpoint-down(mobile-small) {
-      --margin: 20px;
-      margin-bottom: 65px;
+  #nf-field-14-wrap {
+    height: auto;
+  }
+
+  #nf-field-14 {
+    margin-top: 30px;
+
+    height: 100%;
+    max-height: 100px;
+
+    overflow: hidden;
+    resize: vertical;
+  }
+
+  #nf-field-14-wrap .nf-field-label {
+    top: 20px;
+    transform: none;
+
+    transition:
+      top $transition-default,
+      font-size $transition-default;
+  }
+
+  .button--submit {
+    margin-left: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    border: none;
+    outline: none;
+    color: $text-primary;
+    background-color: $color-primary;
+    border-radius: 2px;
+
+    transition: all $transition-default;
+
+    @include hover() {
+      background: $color-primary-hover;
+    }
+
+    .icon {
+      display: none;
+    }
+  }
+
+  .nf-error-msg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+
+    margin-right: 0;
+
+    @include breakpoint-down(tablet) {
+      font-size: 12px;
     }
   }
 }
