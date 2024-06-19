@@ -1,0 +1,357 @@
+/* ------------------------------------------------------------ *\
+	Generic
+\* ------------------------------------------------------------ */
+
+@import '../../../../resources/scss/generic/variables';
+@import '../../../../resources/scss/generic/functions';
+@import '../../../../resources/scss/generic/mixins';
+
+/* ------------------------------------------------------------ *\
+	Blocks: Section Subscribe
+\* ------------------------------------------------------------ */
+
+.section-subscribe {
+  position: relative;
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.subscribe__panel {
+  position: relative;
+  z-index: inherit;
+
+  padding: 50px;
+
+  background-color: $color-primary;
+  border-radius: 2px;
+
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  align-items: center;
+  gap: 50px;
+
+  @include breakpoint-down(desktop) {
+    padding: 30px;
+
+    gap: 30px;
+  }
+
+  @include breakpoint-down(tablet) {
+    grid-template-columns: 1fr;
+  }
+
+  @include breakpoint-down(mobile) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.subscribe__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 50%;
+
+  background-color: $color-primary-hover;
+}
+
+.subscribe__divider {
+  width: 100%;
+  height: 138px;
+
+  background-color: transparentize($white, 0.7);
+
+  @include breakpoint-down(desktop) {
+    height: 98px;
+  }
+
+  @include breakpoint-down(tablet) {
+    display: none;
+  }
+}
+
+.subscribe__text {
+  justify-self: flex-end;
+  max-width: 500px;
+
+  color: $white;
+
+  font-family: $font-main;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 120%;
+  text-align: right;
+
+  @include breakpoint-down(desktop) {
+    font-size: 18px;
+  }
+
+  @include breakpoint-down(tablet) {
+    max-width: 100%;
+
+    text-align: left;
+  }
+}
+
+.subscribe__form {
+  .nf-before-form-content,
+  .nf-after-form-content,
+  .ninja-forms-req-symbol {
+    display: none;
+  }
+
+  nf-rows-wrap {
+    display: flex;
+    gap: 10px;
+
+    > .nf-row:first-child {
+      width: 100%;
+    }
+
+    @include breakpoint-down(desktop) {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+
+  #nf-field-9-container {
+    margin-bottom: 0;
+    width: auto;
+  }
+
+  #nf-field-9 {
+    background-color: $white;
+    border-radius: 2px;
+
+    text-wrap: nowrap;
+
+    .icon {
+      display: none;
+    }
+
+    .label {
+      color: $color-primary;
+
+      font-family: $font-main;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 100%;
+    }
+  }
+
+  .nf-field-container {
+    margin-bottom: 0;
+  }
+
+  .nf-field-label {
+    margin-bottom: 0;
+  }
+
+  #nf-field-8-wrap {
+    cursor: text;
+    position: relative;
+
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 56px;
+
+    border: 1px solid transparentize($white, 0.5);
+    border-radius: 2px;
+    color: transparentize($white, 0.3);
+
+    transition: border-color $transition-default;
+
+    @include hover {
+      border-color: $white;
+    }
+
+    @include breakpoint-down(desktop) {
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-bottom: 5px;
+
+      height: 44px;
+    }
+
+    @include breakpoint-down(mobile) {
+      font-size: 14px;
+    }
+  }
+
+  #nf-field-8 {
+    color: $white;
+    border: none;
+    background: transparent;
+
+    font-family: $font-main;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+
+    &::placeholder {
+      color: transparent;
+    }
+
+    @include breakpoint-down(desktop) {
+      font-size: 14px;
+    }
+  }
+
+  .nf-field-label {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+
+    font-family: $font-main;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+
+    transition: transform $transition-default;
+
+    @include breakpoint-down(desktop) {
+      left: 15px;
+
+      font-size: 14px;
+    }
+  }
+
+  &:has(#nf-field-8:not(:placeholder-shown)),
+  &:has(#nf-field-8:focus) {
+    #nf-field-8-wrap .nf-field-label {
+      transform: translateY(-120%);
+    }
+  }
+
+  #nf-error-8 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+  }
+
+  .nf-response-msg {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+}
+
+.modal__wrap {
+  display: flex;
+  height: 400px;
+
+  @include breakpoint-down(mobile-small) {
+    flex-direction: column;
+    height: auto;
+  }
+}
+
+.modal__image {
+  padding-left: 70px;
+
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 270px;
+
+  overflow: hidden;
+
+  background-color: $color-primary;
+
+  svg {
+    height: 300px;
+    width: 300px;
+
+    fill: $color-primary-hover;
+  }
+
+  @include breakpoint-down(mobile-small) {
+    padding-left: 0;
+    padding-top: 70px;
+
+    justify-content: center;
+    align-items: baseline;
+    width: 100%;
+    height: 300px;
+  }
+}
+
+.modal__content {
+  padding: 70px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  @include breakpoint-down(mobile) {
+    padding: 50px;
+  }
+
+  @include breakpoint-down(mobile-small) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.modal__title {
+  color: $text-secondary;
+
+  font-family: $font-main;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 100%;
+
+  @include breakpoint-down(mobile) {
+    font-size: 30px;
+  }
+}
+
+.modal__text {
+  margin-top: 20px;
+
+  max-width: 415px;
+
+  color: $text-secondary;
+
+  font-family: $font-secondary;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: -0.05em;
+
+  @include breakpoint-down(mobile) {
+    font-size: 16px;
+  }
+}
+
+.modal__button {
+  margin-top: 50px;
+
+  @include breakpoint-down(mobile) {
+    margin-top: 30px;
+  }
+}

@@ -515,6 +515,8 @@ svg.logo {
 
   .button__icon {
     margin-right: 15px;
+
+    fill: currentColor;
   }
 
   @include breakpoint-down(desktop) {

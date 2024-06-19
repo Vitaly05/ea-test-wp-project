@@ -11,16 +11,16 @@
 /**
  * Block preview image
  */
-if ( isset( $block['data']['block_preview_images'] ) ) {
-	hm_get_template_part_with_params( 'fragments/block-preview-image', ['block' => $block] );
-	return;
+if (isset($block['data']['block_preview_images'])) {
+  hm_get_template_part_with_params('fragments/block-preview-image', ['block' => $block]);
+  return;
 }
 
 /**
  * Block Variables
  */
 
-$section_title = get_field('testimonials_section_title')
+$section_title = get_field('testimonials_section_title');
 ?>
 
 <section class="section-testimonials">
