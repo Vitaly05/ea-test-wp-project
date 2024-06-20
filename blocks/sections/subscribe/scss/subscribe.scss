@@ -273,6 +273,13 @@
     clip: rect(0 0 0 0);
     overflow: hidden;
   }
+
+  .ninja-forms-field {
+    transition-property: background-color, color;
+    transition-delay: 1000s;
+
+    -webkit-box-shadow: 0 0 0 1000px transparent inset;
+  }
 }
 
 .modal__wrap {
