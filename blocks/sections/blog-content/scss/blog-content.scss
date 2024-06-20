@@ -196,10 +196,6 @@
       line-height: 100%;
 
       transition: background-size $transition-default;
-
-      @include breakpoint-down(mobile-small) {
-        max-width: 125px;
-      }
     }
 
     @include hover {

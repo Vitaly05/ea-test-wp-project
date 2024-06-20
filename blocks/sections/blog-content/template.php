@@ -56,7 +56,7 @@ $blog_image = wp_get_attachment_image_src(get_post_thumbnail_id($id), 'full');
               </svg>
             </div>
             <div class="back-button__text">
-              Back to Before & After
+              Back to Resources
             </div>
           </a>
         </div>
