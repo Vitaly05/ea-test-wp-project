@@ -22,8 +22,9 @@ if (isset($block['data']['block_preview_images'])) {
 
 $blog_date = get_field('blog_date');
 $blog_title = get_field('blog_title');
-$blog_image = get_field('blog_image');
 $blog_content = get_field('blog_content');
+$id = get_queried_object_id();
+$blog_image = wp_get_attachment_image_src(get_post_thumbnail_id($id), 'full');
 
 ?>
 
@@ -37,8 +38,8 @@ $blog_content = get_field('blog_content');
       <div class="blog__title">
         <?php echo $blog_title; ?>
       </div>
-      <?php if ($blog_image): ?>
-        <img class="blog__image" src="<?php echo $blog_image['url'] ?>" alt="<?php echo $blog_image['alt'] ?>">
+      <?php if ($blog_image[0]): ?>
+        <img class="blog__image" src="<?php echo $blog_image[0] ?>">
       <?php endif; ?>
       <div class="blog__content">
         <?php echo $blog_content; ?>
