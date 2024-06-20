@@ -46,7 +46,7 @@ $blog_image = wp_get_attachment_image_src(get_post_thumbnail_id($id), 'full');
       </div>
       <div class="blog__actions">
         <div>
-          <a class="blog__back-button" href="/">
+          <a class="blog__back-button" href="/#resources-section">
             <div class="back-button__icon">
               <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path

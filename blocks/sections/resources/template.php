@@ -27,7 +27,7 @@ $cards = get_field('resources_cards');
 
 ?>
 
-<section class="resources-section">
+<section class="resources-section" id="resources-section">
   <div class="container">
     <?php if ($left_image): ?>
       <img class="resources__left-image" src="<?php echo $left_image['url'] ?>" alt="<?php echo $left_image['alt'] ?>">
@@ -49,7 +49,7 @@ $cards = get_field('resources_cards');
             <?php if ($key > 3) {
               continue;
             } ?>
-            <a class="resources__card" href="javascript:void(0)">
+            <a class="resources__card" href="<?php echo $card['link'] ? $card['link']['url'] : 'javascript:void(0)' ?>">
               <img class="card__image" src="<?php echo $card['photo']['url']; ?>"
                 alt="<?php echo $card['photo']['alt']; ?>">
               <div class="card__info">
