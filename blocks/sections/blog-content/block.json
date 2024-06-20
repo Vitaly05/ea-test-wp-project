@@ -1,0 +1,46 @@
+{
+  "name": "blog-content",
+  "title": "Blog Content",
+  "description": "",
+  "style": [
+    "file:../../../dist/css/blocks/blog-content/scss/block-blog-content.css"
+  ],
+  "script": "block-blog-content",
+  "category": "hm-sections",
+  "icon": "text-page",
+  "apiVersion": 2,
+  "keywords": [],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "template.php"
+  },
+  "styles": [],
+  "supports": {
+    "align": false,
+    "anchor": false,
+    "alignContent": false,
+    "color": {
+      "text": false,
+      "background": false,
+      "link": false
+    },
+    "alignText": false,
+    "fullHeight": false
+  },
+  "attributes": {
+    "mode": {
+      "type": "string"
+    },
+    "data": {
+      "type": "object"
+    }
+  },
+  "example": {
+    "attributes": {
+      "mode": "preview",
+      "data": {
+        "block_preview_images": "block-blog-content.png"
+      }
+    }
+  }
+}

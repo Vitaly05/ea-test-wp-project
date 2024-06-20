@@ -33,7 +33,11 @@ const init = function() {
   })
 
   const target = document.querySelector('.js-collapse-header')
-  observer.observe(target)
+  if (target) {
+    observer.observe(target)
+  } else {
+    $('.js-sticky-header').addClass('header__sticky--collapse')
+  }
 
   setTabIndex('.js-header-menu a', -1)
 
@@ -43,7 +47,7 @@ const init = function() {
     ignoreOverlay: true,
     passive: true,
     scrollX: false
-  });
+  })
 
   function setTabIndex(selector, value) {
     $(selector).each(function() {
