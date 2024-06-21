@@ -52,6 +52,21 @@ const init = function() {
     $(e.slides[e.activeIndex]).find('video').get(0).play()
   })
 
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        $('#js-main-video-swiper .swiper-slide-active video').get(0).play()
+        $('#js-main-video-swiper .swiper-slide-active .video__poster').addClass('video__poster--hidden')
+      } else {
+        $('#js-main-video-swiper .swiper-slide-active video').get(0).pause()
+        $('#js-main-video-swiper .swiper-slide-active .video__poster').removeClass('video__poster--hidden')
+      }
+    })
+  })
+
+  const target = document.querySelector('.section-videos')
+  observer.observe(target)
+
   $('.js-poster-play-button').each(function() {
     const posterEl = $(this).parent()
     const videoEl = $(this).parents('.swiper-slide').find('video')
