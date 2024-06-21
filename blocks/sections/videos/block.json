@@ -1,0 +1,46 @@
+{
+  "name": "videos",
+  "title": "Videos",
+  "description": "",
+  "style": [
+    "file:../../../dist/css/blocks/videos/scss/block-videos.css"
+  ],
+  "script": "block-videos",
+  "category": "hm-sections",
+  "icon": "format-video",
+  "apiVersion": 2,
+  "keywords": [],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "template.php"
+  },
+  "styles": [],
+  "supports": {
+    "align": false,
+    "anchor": false,
+    "alignContent": false,
+    "color": {
+      "text": false,
+      "background": false,
+      "link": false
+    },
+    "alignText": false,
+    "fullHeight": false
+  },
+  "attributes": {
+    "mode": {
+      "type": "string"
+    },
+    "data": {
+      "type": "object"
+    }
+  },
+  "example": {
+    "attributes": {
+      "mode": "preview",
+      "data": {
+        "block_preview_images": "block-videos.png"
+      }
+    }
+  }
+}

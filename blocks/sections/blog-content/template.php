@@ -21,8 +21,8 @@ if (isset($block['data']['block_preview_images'])) {
  */
 
 $blog_date = get_field('blog_date');
-$blog_title = get_field('blog_title');
-$blog_content = get_field('blog_content');
+$blog_title = get_the_title();
+$blog_content = get_the_content();
 $id = get_queried_object_id();
 $blog_image = wp_get_attachment_image_src(get_post_thumbnail_id($id), 'full');
 

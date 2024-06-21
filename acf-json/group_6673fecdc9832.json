@@ -19,47 +19,6 @@
             "display_format": "j M Y",
             "return_format": "j M Y",
             "first_day": 1
-        },
-        {
-            "key": "field_6673ff442f617",
-            "label": "Blog Title",
-            "name": "blog_title",
-            "aria-label": "",
-            "type": "textarea",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "acfe_textarea_code": 0,
-            "maxlength": "",
-            "rows": "",
-            "placeholder": "",
-            "new_lines": ""
-        },
-        {
-            "key": "field_6673ff652f619",
-            "label": "Blog Content",
-            "name": "blog_content",
-            "aria-label": "",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 1,
-            "delay": 0
         }
     ],
     "location": [
@@ -87,5 +46,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1718904417
+    "modified": 1718955858
 }

@@ -1,0 +1,206 @@
+/* ------------------------------------------------------------ *\
+	Generic
+\* ------------------------------------------------------------ */
+
+@import '../../../../resources/scss/generic/variables';
+@import '../../../../resources/scss/generic/functions';
+@import '../../../../resources/scss/generic/mixins';
+
+/* ------------------------------------------------------------ *\
+	Blocks: Section Videos
+\* ------------------------------------------------------------ */
+
+.section-videos {
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  background-color: $white;
+}
+
+.section-videos__wrap {
+  .section-title,
+  .section-text {
+    text-align: center;
+  }
+}
+
+.section-videos__text {
+  margin-top: 20px;
+}
+
+.section-videos__videos {
+  position: relative;
+
+  margin-top: 50px;
+  padding-bottom: 60px;
+  padding-left: 60px;
+
+  display: flex;
+  gap: 25px;
+
+  .swiper__controls {
+    .slider__button {
+      color: transparentize($white, 0.5);
+    }
+
+    .swiper-pagination-bullet {
+      border-color: transparentize($white, 0.5);
+
+      &.swiper-pagination-bullet-active {
+        background-color: $white;
+      }
+    }
+  }
+
+  .file-video {
+    object-fit: cover;
+  }
+
+  .video__poster {
+    box-sizing: border-box;
+
+    .poster__title {
+      color: $white;
+
+      font-family: $font-secondary;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 36px;
+      line-height: 120%;
+    }
+
+    .poster__text {
+      color: $white;
+
+      font-family: $font-main;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+
+  .videos__main-video {
+    &,
+    .swiper-slide {
+      width: 50%;
+      height: 510px;
+
+      @include breakpoint-down(large-desktop) {
+        height: 410px;
+      }
+    }
+
+    .video__poster {
+      padding-bottom: 27px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
+  .videos__other-videos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 688px;
+    height: 510px;
+
+    @include breakpoint-down(large-desktop) {
+      width: 488px;
+      height: 410px;
+    }
+
+    .swiper {
+      max-width: 100%;
+    }
+
+    .swiper-slide,
+    .file-video {
+      width: 334px;
+      height: 429px;
+
+      @include breakpoint-down(large-desktop) {
+        width: 234px;
+        height: 279px;
+      }
+    }
+
+    .swiper-wrapper--hidden {
+      display: none;
+    }
+
+    .video__poster {
+      padding: 26px;
+
+      .poster__title {
+        font-size: 24px;
+      }
+
+      .poster__text {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .video__poster {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(180deg, transparent 0%, transparent 60%, rgba(0, 0, 0, 0.6) 100%);
+
+    .poster__play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80px;
+      height: 80px;
+
+      background-color: transparentize($black, 0.5);
+      border-radius: 50%;
+      border: none;
+
+      svg {
+        width: 50px;
+        height: 50px;
+
+        fill: $white;
+
+        transition: fill $transition-default;
+      }
+
+      @include hover {
+        svg {
+          fill: transparentize($white, 0.5);
+        }
+      }
+    }
+  }
+
+  .video__poster--hidden {
+    display: none;
+  }
+}
+
+.section-videos__bg {
+  position: absolute;
+  top: 60px;
+  right: 100px;
+
+  width: calc(100% - 100px);
+  height: calc(100% - 60px);
+
+  background-color: $color-primary;
+}
