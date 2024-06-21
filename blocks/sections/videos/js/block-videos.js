@@ -33,12 +33,23 @@ const init = function() {
   })
 
 
-  othersVideoSwiper.on('slideNextTransitionStart', function(e) {
+  othersVideoSwiper.on('slideNextTransitionStart', function() {
     mainVideoSwiper.slideNext()
   })
 
-  othersVideoSwiper.on('slidePrevTransitionStart', function(e) {
+  othersVideoSwiper.on('slidePrevTransitionStart', function() {
     mainVideoSwiper.slidePrev()
+  })
+
+  mainVideoSwiper.on('slideChange', function(e) {
+    $('#js-main-video-swiper video').each(function() {
+      $(this).get(0).pause()
+      $(this).parent().find('.video__poster').removeClass('video__poster--hidden')
+    })
+    $(e.wrapperEl).find('.video__poster').each(function() {
+      $(this).addClass('video__poster--hidden')
+    })
+    $(e.slides[e.activeIndex]).find('video').get(0).play()
   })
 
   $('.js-poster-play-button').each(function() {
